@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+
+		ul{
+			width: 790px;
+			margin: 0 auto;
+		}
+
+		ul>li{
+			float: left;
+			width: 150px;
+			margin-right: 10px;
+		}
+
+		ul>li:last-child{margin-right: 0;}
+
+		ul>li>a{
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background-color: #f00;
+			transition:all 2s ease-in-out 0s;
+		}
+
+		ul>li>a:link{color:#fff;}
+
+		ul>li>a:hover{
+			height: 400px;
+			color: #000;
+			background-color: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">CSS3 트랜지션</h1>
+
+		<ul class="clearfix">
+			<li><a href="#">메뉴-1</a></li>
+			<li><a href="#">메뉴-2</a></li>
+			<li><a href="#">메뉴-3</a></li>
+			<li><a href="#">메뉴-4</a></li>
+			<li><a href="#">메뉴-5</a></li>
+		</ul>
+	</div>
+</body>
+</html>

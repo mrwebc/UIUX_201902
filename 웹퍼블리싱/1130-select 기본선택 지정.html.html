@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1130-select 기본선택 지정.html</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div id="wrap">
+        <h1>select - 기본선택지정</h1>
+        <form name="frmSelect" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>가고싶은 나라</legend>
+                <label for="natioin">나라선택</label>
+                <select id="nation">
+                    <option>선택하세요</option>
+                    <option>미국</option>
+                    <option>영국</option>
+                    <option>중국</option>
+                    <option>일본</option>
+                    <option selected>한국</option>
+                </select>
+            </fieldset>
+            <p>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

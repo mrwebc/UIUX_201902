@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>340-mouseenter와 mouseover의 차이</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      h2,h3,h4,h5{
+        font-size: 20px;
+        text-align: center;
+      }
+
+      hr{display: block;margin: 20px 0;}
+
+      .park{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        background-color: #f0f;
+        border: 1px solid #000;
+      }
+
+      .game{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -50px;
+        background-color: #ff0;
+        border: 1px solid #000;
+      }
+
+    </style>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+
+        var count_park_in = 0;//공원입장 횟수
+        var count_park_out = 0;//공원퇴장 횟수
+
+        var count_game_in = 0;
+        var count_game_out = 0;
+
+        //park에 입장했을 때 
+        $(".park").on("mouseenter", function(){
+          count_park_in = count_park_in + 1;
+          $("h2>span").text(count_park_in);
+        });
+
+
+        //park에서 퇴장했을 때
+        $(".park").on("mouseleave", function(){
+          count_park_out++;
+          $("h4>span").text(count_park_out);
+        });
+
+
+        //game에 입장했을 때 
+        $(".game").on("mouseenter", function(){
+          //count_game_in += 1;
+          count_game_in++;//자기자신의 값에 1증가
+          $("h3>span").text(count_game_in);
+        });
+
+        $(".game").on("mouseleave", function(){
+          count_game_out++;
+          $("h5>span").text(count_game_out);
+        });
+
+        /*
+          mouseover와 mouseenter 이벤트의 차이
+
+          1. 부모자식 관계가 설정되어 있지 않을 경우
+          아무런 차이가 없음.
+
+          2. 부모자식 관계가 설정된 상태에서 동일한 이벤트를
+          부모자식간에 모두 설정한 경우
+
+            1) mouseover, mouseout - 자식에게 발생한 이벤트가
+            부모에게도 일어남(이벤트 전파됨)
+
+            2) mouseenter, mouseleave - 자식에게 이벤트가 발생해도
+            부모에게 동일한 이벤트가 발생하지 않음
+            (각각 독입적, 이벤트 전파 안됨)
+        */
+
+
+      });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1 class="text-center">에버랜드 입장료 정산</h1>
+
+    <div class="park">
+      <p class="game"></p>
+    </div>
+
+    <h2>park 입장횟수 : <span>0</span></h2>
+    <h3>game 입장횟수 : <span>0</span></h3>
+
+    <hr />
+    
+    <h4>park 퇴장횟수 : <span>0</span></h4>
+    <h5>game 퇴장횟수 : <span>0</span></h5>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>60-함수를 이용한 일괄 반복 처리</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<h1 class="text-center">함수를 이용한 코드의 재사용</h1>
+
+	<script>
+		//두수의 사칙연산 결과를 출력
+		var num_1 = 200;
+		var num_2 = 100;
+
+		console.log("num_1+num_2 =",num_1+num_2);
+		console.log("num_1-num_2 =",num_1-num_2);
+		console.log("num_1*num_2 =",num_1*num_2);
+		console.log("num_1/num_2 =",num_1/num_2);
+		console.log("-----------------------");
+
+		console.log("num_1+num_2 =",num_1+num_2);
+		console.log("num_1-num_2 =",num_1-num_2);
+		console.log("num_1*num_2 =",num_1*num_2);
+		console.log("num_1/num_2 =",num_1/num_2);
+		console.log("-----------------------");
+
+		console.log("num_1+num_2 =",num_1+num_2);
+		console.log("num_1-num_2 =",num_1-num_2);
+		console.log("num_1*num_2 =",num_1*num_2);
+		console.log("num_1/num_2 =",num_1/num_2);
+		console.log("-----------------------");
+
+
+		//위 코드를 출력하는 operation 함수를 선언하고 3번 호출하세요.
+		var operation = function(){
+
+				console.log("호출성공");
+				console.log("num_1+num_2 =",num_1+num_2);
+				console.log("num_1-num_2 =",num_1-num_2);
+				console.log("num_1*num_2 =",num_1*num_2);
+				console.log("num_1/num_2 =",num_1/num_2);
+				console.log("-----------------------");
+
+				var num_3 = 300;
+				console.log("num_3 = ", num_3);
+		};
+
+		//함수안에서 선언한 변수는 그 함수 밖에서 사용할 수 없다.
+		//즉, 함수안에서만 유효하다.
+		//하지만 함수 밖에서 선언한 변수는 함수 안에서 사용할 수 있다.
+		console.log("num_3 = ", num_3);
+
+		operation();
+		operation();
+		operation();
+
+	</script>
+</body>
+</html>

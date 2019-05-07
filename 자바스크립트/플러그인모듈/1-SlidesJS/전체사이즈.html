@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>slidesjs 플러그인</title>
+	<style>
+		*{margin:0;padding:0;}
+
+		h1{
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+		}
+
+		.slides{position:relative;width:100%;height:270px;margin:0 auto;}
+
+		.slides>.slidesjs-container>.slidesjs-control>p{
+			height: 270px;
+			text-indent: -9999px;
+			background-size: cover;
+		}
+
+		.slides>.slidesjs-container>.slidesjs-control>p:nth-child(1){
+			background-image: url(images/slide-1.jpg);
+		}
+
+		.slides>.slidesjs-container>.slidesjs-control>p:nth-child(2){
+			background-image: url(images/slide-2.jpg);
+		}
+
+		.slides>.slidesjs-container>.slidesjs-control>p:nth-child(3){
+			background-image: url(images/slide-3.jpg);
+		}
+
+		.slides>.slidesjs-container>.slidesjs-control>p:nth-child(4){
+			background-image: url(images/slide-4.jpg);
+		}
+
+		.slides>.slidesjs-container>.slidesjs-control>p:nth-child(5){
+			background-image: url(images/slide-5.jpg);
+		}
+
+		.slidesjs-navigation{display: none;}
+
+		/* 아래버튼 - indicator 인디케이터 */
+		.slides>.slidesjs-pagination{
+			position: absolute;
+			left: 50%;
+			bottom: 20px;
+			width: 110px;
+			margin-left: -55px;
+			z-index: 100;
+			*zoom:1;
+		}
+
+		.slides>.slidesjs-pagination:after{display: block;clear: both;content: '';}
+
+		.slides>.slidesjs-pagination>li{
+			float: left;
+			width: 18px;
+			margin-right: 5px;
+			list-style: none;
+		}
+
+		.slides>.slidesjs-pagination>li:last-child{margin-right: 0;}
+
+		.slides>.slidesjs-pagination>li>a{
+			display: block;
+			height: 18px;
+			text-indent: -9999px;
+			background-color: #fff;
+			border-radius: 9px;
+		}
+
+		.slides>.slidesjs-pagination>li>a.active{background-color: #ff0;}
+
+
+
+
+		/* 플러그인을 사용한 슬라이드에 대해 CSS를 작성할 때는
+				먼저 플러그인을 연결부터 하고 나서 작성해야 한다.
+		*/
+	</style>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/jquery.slides.min.js"></script>
+	<script>
+    $(function(){
+      $(".slides").slidesjs({
+				pagination:{effect:"fade"}//slide 기본값
+      });
+    });
+	</script>
+</head>
+<body>
+	<h1>SlidesJS 플러그인</h1>
+
+	<div class="slides">
+		<p>제이쿼리, 자바스크립트를 몰라도 사용 가능</p>
+		<p>slide 및 fade 효과</p>
+		<p>다양한 특수효과 및 옵션지원</p>
+		<p>쉬운설정</p>
+	</div>
+</body>
+</html>

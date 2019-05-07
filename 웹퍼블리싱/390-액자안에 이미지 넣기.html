@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>390-액자안에 이미지 넣기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 액자역할 */
+        .frame{
+            overflow:hidden;
+            width:150px;
+            height:150px;
+            margin:0 auto;
+            border:1px solid black;
+        }
+
+        .frame>img{
+            width:100%;
+            /* height:auto; 기본값 */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">액자역할의 태그는 상황에 따라 다르다.</h1>
+
+        <p class="frame">
+            <img src="./images/prince.png" alt="어린왕자">
+        </p>
+    </div>
+</body>
+</html>

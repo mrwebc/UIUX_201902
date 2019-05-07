@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>790-z-index를 이용한 적재순서 조정</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .parent{
+            position:relative;/*기준점설정*/
+            width:500px;
+            height:400px;
+            margin:0 auto;
+            border:1px solid black;
+        }
+
+        .parent>span{
+            display:block;
+            position:absolute;
+            width:100px;
+            height:100px;
+        }
+
+        .red{
+            left:200px;
+            top:100px;
+            background-color:red;
+            z-index:300;
+        }
+
+        .blue{
+            left:230px;
+            top:130px;
+            background-color:blue;
+            z-index:100;
+        }
+
+        .yellow{
+            left:160px;
+            top:160px;
+            background-color:yellow;
+            z-index:200;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">z-index 값은 100단위로 권장</h1>
+
+        <p class="parent">
+            <span class="red">red</span>
+            <span class="blue">blue</span>
+            <span class="yellow">yellow</span>
+        </p>
+
+        <h2>
+            여러 요소에 포지션 적용시 자동으로 z-index 값이 부여된다. 맨처음 요소의 z-index값은 0, 그 다음요소부터는 1, 2, 3, .... 1씩 증가한다.
+
+            이것은 태그의 기술 순서 기준이다.
+        </h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+#wrap{
+	width:427px;
+	margin:0 auto;
+	padding-top:50px;
+}
+
+h1{padding:20px;text-align:center;}
+
+#section{
+	position:relative;
+	height:450px;
+	border:1px solid #dedede;
+}
+
+#section>ul{
+	margin:15px 0 0 20px;
+	*zoom:1
+}
+#section>ul:after{
+	display:block;
+	clear:both;
+	content:''
+}
+
+#section>ul>li{
+	float:left;
+	font-weight:800;
+}
+
+#section>ul>li:nth-child(odd){width:50px;}
+#section>ul>li:nth-child(even){width:60px;}
+
+
+#section>.box{
+	display:none;
+	position:absolute;
+	left:20px;
+	top:50px;
+	width:387px;height:400px;
+	text-indent:-9999px;
+	background-color:#FFF;	
+	background-repeat:no-repeat;
+}
+
+#section>.box:target{
+	display:block;
+}
+
+#news{background-image:url(../images/news.png);}
+#sports{background-image:url(../images/sports.png);}
+#entertainment{background-image:url(../images/entertainment.png);}
+#life{background-image:url(../images/life.png);}
+#tv{background-image:url(../images/tv.png);}
+
+
+#section>#news{display:block;}
+
+
+
+

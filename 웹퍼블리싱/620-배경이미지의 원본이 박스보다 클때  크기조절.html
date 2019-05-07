@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>620-배경이미지의 원본이 박스보다 클때 크기조절</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{text-align:center;}
+
+        p{
+            width:300px;
+            height:250px;
+            margin:0 auto 20px;
+            line-height:250px;
+            outline:1px solid blue;
+        }
+
+        p.s1{
+            background-image:url(images/background-640x423.jpg);
+            background-size:250px 100px;
+            background-repeat:no-repeat;
+        }
+
+        p.s2{
+            background-image:url(images/background-640x423.jpg);
+            background-size:250px auto;
+            background-repeat:no-repeat;
+        }
+
+        p.s3{
+            background-image:url(images/background-640x423.jpg);
+            background-size:cover;/*610번의 contain 결과와 같음*/
+            background-repeat:no-repeat;
+        }
+
+        p.s4{
+            background-image:url(images/background-640x423.jpg);
+            background-size:contain;/*610번의 cover 결과와 같음*/
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">배경이미지 크기조절</h1>
+
+        <img src="images/background-640x423.jpg" alt="#">
+
+        <p class="s1">background-size : 250px 100px</p>
+        <p class="s2">background-size : ?</p>
+        <p class="s3">background-size : ?</p>
+        <p class="s4">background-size : ?</p>
+    </div>
+</body>
+</html>

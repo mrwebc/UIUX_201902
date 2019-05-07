@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>250-margin 바깥여백 설정</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 
+         <h1> 마진 - top:20px,  bottom:30px,  left:170px, right:0
+        */
+
+        h1{
+            margin-top:20px;
+            margin-right:0;
+            margin-bottom:30px;
+            margin-left:170px;
+        }
+
+
+        h1+div{
+            width:300px;
+            margin-left:100px;
+            border:1px solid green;
+        }
+    </style>
+<body>
+    <div id="wrap">
+        <h1>왼쪽 마진</h1>
+
+        <div>
+            <p>왼쪽으로 100px 만큼 떨어진 컨테이너</p>
+            <img src="images/design.png" alt="#">
+        </div>
+    </div>
+</body>
+</html>

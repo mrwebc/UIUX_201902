@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>150-attr()로 태그의 속성을 핸들링</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+		<style>
+			p{width:300px;margin:0 auto;}
+			p>img{display:block;width:100%;}
+		</style>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+			//ready == DOMContentLoaded
+			//DOM Tree 구성이 완료된 시점에 함수를 호출하는 방식으로 작동함
+			$(document).ready(function(){
+
+				var $img = $("img");
+
+				//img 태그의 src 속성값을 가져와서 콘솔창에 출력
+				console.log("src = ", $img.attr("src"));
+
+				//$img 요소에 대한 클릭이벤트 구문
+				$img.on("click", function(){
+
+					//img 태그의 src 속성값을 images/flower.jpg로 지정
+					//$img.attr("src", "images/flower.jpg");
+					//$img.attr("alt", "꽃");
+
+					//체인방식
+					//$img.attr("src", "images/flower.jpg").attr("alt", "꽃");
+
+					
+					//JSON 방식 - JavaScript Object Notation
+					//img 태그의 src 속성값을 "images/flower.jpg"로 변경
+					//img 태그의 alt 속성값을 "꽃"으로 변경
+					//img 태그의 title 속성값을 "해바라기"로 생성
+					$img.attr({
+						"src" : "images/flower.jpg",
+						"alt" : "꽃",
+						title : "해바라기",
+						"data-home" : "인천"
+					});
+
+				});
+
+			});
+
+		
+			//준비핸들러는 서로 독립적으로 작동한다.(공유X)
+			$(document).ready(function(){
+				//h1요소 클릭시 이미지에 테두리 설정
+				$("h1").on("click",function(){
+					//attr() 사용시 인라인 방식(1000점) 으로 적용됨
+					$("img").attr("style","border:1px solid black");
+				});
+
+				//버튼에 대한 클릭이벤트 구문
+				$("button").on("click", function(){
+
+					//img 태그의 title 속성값을 "삭제예정"으로 변경
+					$("img").attr("title", "삭제예정");
+					$("img").attr({
+						"title":"삭제예정" 
+					});
+
+					//img 태그의 title 속성 제거
+					$("img").removeAttr("title");
+
+
+					//img 태그의 alt 속성을 제거
+					$("img").removeAttr("alt");
+
+				});
+			});
+		</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">attr()로 이미지의 속성(값)을 제어</h1>
+		<p>
+			<img data-home="seoul" src="images/stone.jpg" alt="바위">
+			<button>속성제거</button>
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>100-사각형의 넓이와 둘레 구하기(연습문제)</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<h1 class="text-center">100-사각형의 넓이와 둘레 구하기(연습문제)</h1>
+	<script>
+
+		//문자숫자를 연산가능한 숫자로 변환해 주는 내장함수 Number()
+		var width = Number(prompt('width 값을 입력하세요.'));
+		var height = Number(prompt('height 값을 입력하세요.'));
+
+		var area = width * height;//사각형의 넓이
+
+		var circumference = 2*(width+height);//사각형의 둘레
+
+		console.log('사각형의 넓이는 ', area);
+		console.log('사각형의 둘레는 ', circumference);
+</script>
+</body>
+</html>

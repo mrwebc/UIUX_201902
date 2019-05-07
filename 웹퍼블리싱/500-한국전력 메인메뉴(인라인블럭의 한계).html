@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>500-한국전력 메인메뉴</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+        ul.gnb{
+            width:630px;
+            margin:0 auto;
+        }
+
+        ul.gnb>li{
+            /* display:inline-block; */
+            float:left;/* 박스를 가로로 나열할 때 주로 사용 */
+            width:150px;
+            margin-right:10px;
+            border:1px solid black;
+            box-sizing:border-box;
+        }
+
+        ul.gnb>li.last{margin-right:0;}
+
+        ul.gnb>li>a{
+            display:block;
+            line-height: 50px;
+            text-align:center;
+        }
+
+        ul.gnb>li:hover>a{
+            color:white;
+            text-decoration:none;
+            background-color:green;
+        }
+
+        ul.gnb>li>a+ol{display:none;}
+
+        ul.gnb>li:hover>a+ol{
+            display:block;
+            border-top:1px solid black;
+        }
+
+
+        ul.gnb>li:hover>a+ol>li>a{
+            display:block;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+        }
+
+        ul.gnb>li:hover>a+ol>li>a:hover{
+            text-decoration:none;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">한국전력</h1>
+        
+        <ul class="gnb">
+            <li>
+                <a href="#">회사소개</a>
+                <ol>  
+                    <li><a href="#">한전소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">채용정보</a></li>
+                </ol>
+            </li>
+            
+            <li><a href="#">기업소개</a></li>
+            
+            <li>
+                <a href="#">홍보센터</a>
+                <ol>
+                    <li><a href="#">전시/관람</a></li>
+                    <li><a href="#">문화</a></li>
+                    <li><a href="#">스포츠</a></li>
+                    <li><a href="#">공모전</a></li>
+                </ol>
+            </li>
+            <li class="last"><a href="#">지식센터</a></li>
+        </ul>
+    </div>    
+</body>
+</html>

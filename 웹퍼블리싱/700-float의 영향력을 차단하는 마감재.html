@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>주변요소에 미치는 float의 영향력을 차단하는 마감재</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul>li{
+            float:left;
+            width:200px;
+            height:50px;
+            background-color:yellow;
+            border:1px solid black;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">별도의 마감재를 사용한 플롯해제</h1>
+
+        <ul>
+            <li>네이버</li>
+            <li>다음</li>
+            <li>네이트</li>
+        </ul>
+
+        <!-- <div style="clear:both;"></div> 단점:쓸데없이 태그가 하나 추가됨 -->
+
+        <!-- <p style="clear:both;">우리나라 대표 사이트</p> -->
+
+        <p>우리나라 좋은나라~!</p>
+    </div>
+</body>
+</html>

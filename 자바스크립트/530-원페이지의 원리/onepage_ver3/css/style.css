@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.n-fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #555;
+}
+
+header>nav>.gnb{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header>nav>.gnb>li{
+    float: left;
+    width: 200px;
+}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li:hover>a{
+    background-color: #1C6B9D;
+}
+
+section{
+    height: 900px;
+    font-size: 150px;
+    line-height: 900px;
+    text-align: center;
+}
+
+footer{
+    height: 300px;
+    line-height: 300px;
+    font-size: 150px;
+    text-align: center;
+    background-color: pink;
+}
+
+aside{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 160px;
+    height: 140px;
+    text-indent: -9999px;
+    background-image: url(../images/app.png);
+}
+
+

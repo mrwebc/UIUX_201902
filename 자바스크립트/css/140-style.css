@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.slides{
+	width: 627px;
+	margin: 0 auto;
+}
+
+.slides>.slides-pagination>li{
+	float: left;
+	width: 74px;
+	margin-right: 5px;
+}
+
+.slides>.slides-pagination>li.on{
+	border: 3px solid red;
+	box-sizing: border-box;
+}
+
+.slides>.slides-pagination>li:last-child{margin-right: 0;}
+
+.slides>.slides-pagination>li img{
+	display: block;
+	width: 100%;
+}
+
+.slides>p{margin-top: 5px;}
+
+.slides>p>img{
+	display: block;
+	width: 100%;
+}

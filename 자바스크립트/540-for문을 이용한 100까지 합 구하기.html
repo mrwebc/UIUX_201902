@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>540-for문을 이용한 100까지 합 구하기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+
+        //for(변수선언 및 초기화 ; 조건식 ; 증감식){ 반복실행할 코드 }
+
+        var sum = 0;
+
+        for(var i=0;i<=100;i++){
+          sum = sum + i;
+        }
+
+        $(".result").text(sum);
+
+
+        //구구단 2단 출력
+        var str = "";
+
+        for(var k=1;k<=9;k++){
+          str = str + (2 + " * " + k + " = " + (2*k))+"<br>";
+        }
+
+        $(".gugudan").html(str);
+      });
+    </script>
+</head>
+<body>
+  <h1 class="text-center">
+    1~100까지의 합 : <span class="result">?</span>
+  </h1>
+
+  <p>2단</p>
+  <p class="gugudan">
+
+  </p>
+</body>
+</html>

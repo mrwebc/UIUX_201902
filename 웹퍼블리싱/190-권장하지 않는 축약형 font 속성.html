@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>font 속성을 이용한 축약형</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        /*
+            폰트 축약형 정리
+
+            font-size, font-family는 절대 생략 불가이며 두 속성의 순서를 반드시 지켜야 함
+
+            line-height를 적용할 경우 반드시 font-size 속성 뒤에 /(슬래시)를 붙인다.
+
+            font-style, font-weight, line-height는 생략가능
+
+            font-style, font-weight의 위치는 바꿀 수 있다.
+            
+        */
+        
+        p{
+            font:800 italic 30px/40px "돋움","굴림";
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>font 축약형은 권장하지 않습니다.</h1>
+        <p>
+            그 이유는 브라우저가 해석해야할 <br>
+            정보가 많아지기 때문입니다.
+        </p>
+        <p class="second">
+            <span>
+                font 속성을 사용하는 것 보다는 <br>
+                font-style <br>
+                font-weight <br>
+                font-size <br>
+                line-height <br>
+                font-family 처럼 <br>
+                따로다로 CSS 속성을 지정하길 권장합니다.
+            </span>
+        </p>
+        <div>
+            <p>나는 문단을 나타내는 블럭요소 p태그</p>
+        </div>
+    </div>
+
+    <script>
+
+        $("#wrap").on("click", function(){
+            $(this).empty();
+        });
+
+    </script>
+
+
+</body>
+</html>

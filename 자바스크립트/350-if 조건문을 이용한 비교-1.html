@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>350-if 조건문을 이용한 비교-1</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+
+        var nowIdx = 0;
+
+        //증가버튼에 대한 클릭이벤트
+        $(".plus").on("click", function(){
+
+          if(nowIdx<5){
+            nowIdx++;
+          }
+
+          $("#result").text(nowIdx);
+        });
+
+
+        //감소버튼에 대한 클릭이벤트
+        $(".minus").on("click", function(){
+          if(nowIdx>0){
+            nowIdx--;
+            //nowIdx = nowIdx - 1;
+            //nowIdx -= 1;
+          }
+
+          $("#result").text(nowIdx);
+        });
+
+      });
+    </script>
+</head>
+<body>
+    <div id="wrap" style="text-align:center;">
+        <h1 class="text-center">현재값 = <span id="result">0</span></h1>
+      
+        <button class="plus">만약 현재값이 5보다 작다면 1증가</button>
+        <button class="minus">만약 현재값이 0보다 크다면 1감소</button>
+      </div>      
+</body>
+</html>

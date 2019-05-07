@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1050-vetical-align 사용법</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        td{width:150px;height:300px;border:1px solid black;}
+        .test{
+            vertical-align: top;
+            vertical-align: middle;/*기본값*/
+            vertical-align: bottom;
+        }
+
+        p>img{
+            margin-right:20px;
+            border:1px solid black;
+        }
+
+        .top{vertical-align: top;}
+        .middle{vertical-align: middle;}
+        .bottom{vertical-align: bottom;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">vetical-align 사용법</h1>
+
+        <h2>table 에서의 vertical-align</h2>
+        <table>
+            <tr>
+                <td class="test">1행 1열(실험)</td>
+                <td>1행 2열(최초상태)</td>
+            </tr>
+        </table>
+
+        <hr style='display:block;margin:100px'>
+
+        <h2>인라인요소에 지정하는 vertical-align의 해석은 "이 요소를 기준으로...."</h2>
+
+        <div class="box">
+            <p>
+                <img class="top" src="images/daum.png" alt="#">
+                vertical-align: top 정렬
+            </p>
+            <p>
+                <img class="middle" src="images/daum.png" alt="#">
+                vertical-align: middle 정렬
+            </p>
+            <p>
+                <img class="bottom" src="images/daum.png" alt="#">
+                vertical-align: bottom 정렬
+            </p>
+        </div>
+    </div>
+</body>
+</html>

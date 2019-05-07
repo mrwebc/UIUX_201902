@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>150-박스를 벗어나는 내용에 대한 처리</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        *{margin:0;padding:0;}
+        hr{margin:100px 0;}
+    
+        .parent{
+            width:250px;
+            height:100px;
+            background-color:pink;
+            border:5px dotted black;
+        }
+
+        .parent>.child{
+            width:300px;
+            height:160px;
+            background-color:blue;
+            border:10px solid red;
+        }
+
+        .box_1{overflow:visible;}/*기본값*/
+        .box_2{overflow:scroll;}
+        .box_3{overflow:auto;}/*결과적으로 scroll과 같다.*/
+        .box_4{overflow:hidden;}/*가장 중요*/
+
+
+        p{
+            overflow:hidden;
+            width:500px;
+            height:500px;
+            border:10px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>overflow - 넘쳐흐르다</h1>
+        <h2>사이즈가 고정된 요소의 경우에만 overflow 현상이 발생할 수 있다.</h2>
+
+        <p>
+            <img src="images/funny_story_6.jpg" alt="#">
+        </p>
+
+        <hr>
+
+        <div class="parent box_1">
+            <p class="child"></p>
+        </div>
+
+        <hr>
+
+        <div class="parent box_2">
+            <p class="child"></p>
+        </div>
+
+        <hr>
+
+        <div class="parent box_3">
+            <p class="child"></p>
+        </div>
+
+        <hr>
+
+        <div class="parent box_4">
+            <p class="child"></p>
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>.attr() 쿵푸팬더 이미지 속성값 지정</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		#wrap{width:500px;margin:0 auto;text-align:center;}
+		h1{height:100px;line-height:100px;}
+		span,p{display:block;width:400px;margin:30px auto;}
+		img{width:100%;}		
+		img.po{border:1px solid black;}
+	</style>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      //문제1. 첫번째 이미지 클릭시 alt 속성값을 콘솔창에 출력
+      $(".po").on("click", function(){
+        var alt = $(".po").attr("alt")
+        console.log("alt = ",alt);
+        alert("alt = "+alt);
+      });
+
+
+      //문제2. 두번째 h2 클릭시 JSON 방식으로 아래의 값이 입력되는 코드를 작성하세요.
+      //src=images/tai.jpg, alt=타이거마스크, title=돌아온쿵푸팬더
+      $("hr+h2").on("click", function(){
+        $(".tai").attr({
+          "src":"images/tai.jpg",
+          "alt":"타이거마스크",
+          "title":"돌아온쿵푸팬더"
+        });
+      });
+
+
+      //문제3. 버튼클릭시 문제2에서 생성한 모든 속성을 제거하세요.
+      $("button").on("click", function(){
+        $(".tai").removeAttr("src");
+        $(".tai").removeAttr("alt");
+        $(".tai").removeAttr("title");
+      });
+
+    });
+  </script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>.attr() 메소드 활용</h1>
+		<section>
+			<h2>.attr() 메소드를 이용한 속성검사</h2>
+			<span><img src="images/po.jpg" alt="쿵푸팬더" class="po" /></span>
+			
+			<hr />
+			
+			<h2>.attr() 메소드를 이용한 속성 지정</h2>
+      <p><img class="tai" /></p>
+      <p><button>속성제거</button></p>
+		</section>
+	</div>
+</body>
+</html>

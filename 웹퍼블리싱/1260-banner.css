@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+section{}
+
+section>.slides-container{}
+
+section>.slides-container>li{
+	float: left;
+	width: 140px;
+}
+
+section>.slides-container>li>a{
+	display: block;
+	height: 380px;
+}
+
+section>.slides-container>li>a>img{
+	display: block;
+	width: 680px;
+	height: 380px;
+}
+
+
+
+
+
+
+
+
+
+

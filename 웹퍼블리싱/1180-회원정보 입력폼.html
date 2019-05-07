@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1180-회원정보 입력폼</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/1180-form.css">
+    <script src="https://cdn.ckeditor.com/4.11.3/basic/ckeditor.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">회원가입 입력폼</h1>
+
+        <form name="frmJoin" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>회원가입 입력폼</legend>
+                <div class="smit_form">
+
+                    <table class="smit_elem">
+                        <caption>회원정보</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="name">이름</label></th>
+                                <td>
+                                    <input id="name" type="text" maxlength="4" autocomplete="off" required autofocus placeholder="실명으로 부탁해요~!">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="memId">아이디</label></th>
+                                <td>
+                                    <input id="memId" type="text" maxlength="15" autocomplete="off">
+                                    <span class="tip">5~15자 이내의 영문, 숫자만 사용가능</span>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <th scope="row"><label for="memPwd">비밀번호</label></th>
+                                <td>
+                                    <input id="memPwd" type="password">
+                                    <span class="tip">5~15자 이내의 (영문+숫자+특수문자) 권장</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row"><label for="gender">성별</label></th>
+                                <td>
+                                    <input id="gender" type="radio" name="gender"> <span>여자</span>
+                                    <input checked type="radio" name="gender"> <span>남자</span>
+                                </td>
+                            </tr>   
+                            
+                            <tr>
+                                <th scope="row"><label for="">자녀</label></th>
+                                <td>
+                                    <input checked type="checkbox"> <span>아들</span>
+                                    <input checked type="checkbox"> <span>딸</span>
+                                </td>
+                            </tr>  
+                            
+                            <tr>
+                                <th scope="row"><label for="myphoto">마이포토</label></th>
+                                <td class="clearfix">
+                                    <input class="textbox" type="text" readonly>
+                                    
+                                    <div class="container">
+                                        <span class="button">사진규격 (150*150px - 1Mb이내)</span>
+                                        <input class="hidden" id="myphoto" type="file">
+                                    </div>
+                                </td>
+                            </tr>      
+                            
+                            <tr>
+                                <th scope="row"><label for="email">이메일</label></th>
+                                <td>
+                                    <select id="email">
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>daum.net</option>
+                                        <option>nate.com</option>
+                                        <option>korea.com</option>
+                                    </select>
+                                    <input class="email_id" type="text" autocomplete="off">
+                                    @
+                                    <input class="email_domain" type="text" autocomplete="off">
+                                </td>
+                            </tr> 
+                            
+                            <tr>
+                                <th scope="row"><label for="subject">전공</label></th>
+                                <td>
+                                    <input id="subject" type="text" list="subject_list">
+
+                                    <datalist id="subject_list">
+                                        <option>HTML5</option>
+                                        <option>CSS</option>
+                                        <option>Javascript</option>
+                                        <option>jQuery</option>
+                                    </datalist>
+                                </td>
+                            </tr>     
+
+                            <tr>
+                                <th scope="row"><label for="memo">메모</label></th>
+                                <td>
+                                    <textarea class="ckeditor" id="memo" rows="10" cols="30"></textarea>
+                                </td>
+                            </tr>                               
+                        <!-- 
+                            <tr>
+                                <th scope="row"><label for=""></label></th>
+                                <td></td>
+                            </tr>                            
+                        -->
+                        </tbody>
+                    </table>
+                </div><!--.smit_form-->
+                <div class='btn_container'>
+                    <button class="cfm" type="submit">확인</button>
+                    <button class="cncl" type="reset">취소</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

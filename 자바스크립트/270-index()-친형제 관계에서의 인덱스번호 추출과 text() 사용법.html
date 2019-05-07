@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>280-index()-친형제 관계가 아닌 것들에서 인덱스번호 추출과 text() 사용법</title>
+    <style>
+        #wrap{
+            width:800px;
+            margin:0 auto;
+        }
+
+        h1{text-align: center;}
+
+        ol>li{
+            list-style:none;
+            height:50px;
+            margin-bottom:20px;
+            font-size:20px;
+            line-height:50px;         
+            text-align:center;   
+            border:1px solid #ccc;
+        }
+
+        ol>li:nth-child(odd){background-color:pink;}
+        ol>li:nth-child(even){background-color:#dedede;}
+
+        p{text-align:center;}
+        p>span{color:#f00;font-size:30px;}
+
+    
+    </style>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      var nowIdx;
+
+      $("li").on("click",function(){
+
+        //이번에 클릭한 바로 그녀석의 인덱스번호 추출
+        //이 방식은 친형제 관계에서만 효과가 있음(280번 참고)
+        nowIdx = $(this).index();
+
+        console.log("nowIdx = ", nowIdx);
+
+        var cont = $("span").text();//셀렉팅요소의 텍스트 내용을 가져온다.
+        //console.log("cont = ", cont);
+
+        //셀렉팅요소에 텍스트 내용을 넣어준다.
+        $("span").text(nowIdx);
+
+        $("li").eq(2).text("content modify method~!");
+
+      });
+
+    });
+  </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제이쿼리 메소드(API)의 분류</h1>
+        
+        <ol class="jquery">
+            <li>셀렉팅 메소드</li>
+            <li>이벤트 메소드</li>
+            <li>내용조작 메소드</li>
+            <li>이펙트/효과 메소드</li>
+        </ol>
+        
+        <p>현재 선택된 li의 index = <span>?</span></p>
+    </div>    
+</body>
+</html>

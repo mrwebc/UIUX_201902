@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>720-float 을 이용한 레이아웃-수업</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:638px;
+            margin:0 auto;
+        }
+
+        .section>.gnb{
+            width:638px;
+            height:52px;
+            *zoom:1;
+        }
+
+        .section>.gnb:after{
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .section>.gnb>li{
+            float:left;
+            width:150px;            
+            height:50px;
+            margin-right:10px;
+            line-height:50px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        .section>.gnb>li:last-child{margin-right:0;}
+
+
+        .section>p{
+            width:636px;
+            height:300px;
+            margin-top:10px;
+            line-height:300px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        .footer>address{
+            height:50px;
+            line-height:50px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <h1 class="text-center">웹표준 퍼블리싱 강좌</h1>
+        </div>
+
+        <div class="section">
+            <ul class="gnb">
+                <li>보충특강</li>
+                <li>문제풀이</li>
+                <li>자료실</li>
+                <li>작업환경</li>
+            </ul>
+            <p>선택에 따른 내용 출력란(컨텐츠)</p>
+        </div>
+
+        <div class="footer">
+            <address>&copy; Designed by 홍길동</address>
+        </div>
+    </div>    
+</body>
+</html>

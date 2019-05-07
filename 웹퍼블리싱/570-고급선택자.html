@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>고급선택자</title>
+	<style>
+		/*1. 직계자식 선택자를 활용하여 > (&gt ;) 의 색상:red, 폰트사이즈:25px*/ 
+        ol>li:nth-child(2)>ul>li:first-child>span{
+            color:red;
+            font-size:25px
+        }
+
+		/*2. 인접동기 선택자를 활용하여 HTML5의 폰트를 굵게 표현*/ 
+        h1+p{font-weight:800;}
+		
+		/*3. h1과 형제이면서, h1 이후에 나오는 모든 p 태그에 핑크색 배경 */
+		h1~p{background-color:pink;}
+
+		/*4. 애트리뷰트 선택자를 활용하여 네이버를 자간은 5px 적용*/ 
+        a[href="http://www.naver.com"]{letter-spacing:5px;}
+		
+		/*5. 가상선택자를 사용하여 "첫번째 자식"에 밑줄 표시*/ 
+        ol>li:first-child{text-decoration:underline;}
+		
+		/*6. 가상선택자를 사용하여 "마지막 자식"에 배경색 노랑 적용*/ 
+        ol>li:last-child{background-color:yellow;}
+	</style>
+</head>
+<body>
+
+	<div id="wrap">
+		<h1>고급선택자</h1>
+		<p>HTML5</p>
+		<p>CSS3</p>
+		<ol>
+			<li>첫번째 자식</li>
+			<li>자식선택자
+				<ul>
+					<li><span>&gt;</span>로 표현</li>
+					<li><span>직계자식</span>을 의미함</li>
+				</ul>
+			</li>
+			<li>인접동기(형제)선택자
+				<ul>
+					<li><span>+</span>로 표현</li>
+					<li>예) h1+p : h1 바로 다음에 나오는 형제 p</li>
+					<li>바로 다음에 나오지 않는 더 뒤에 위치한 형제p 아님</li>
+				</ul>
+			</li>
+			<li>애트리뷰트(속성) 선택자
+				<ul>
+					<li>속성을 가지는 태그요소를 셀렉팅할 때 적합</li>				
+					<li><a href="http://www.naver.com">네이버</a></li>
+					<li><a href="http://www.daum.net">다음</a></li>
+
+				</ul>
+			</li>		
+			<li>마지막 자식</li>
+		</ol>
+	</div>
+
+</body>
+</html>

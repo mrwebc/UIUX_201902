@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>200-css()를 이용한 스타일적용</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //1. h1요소를 빨간색으로 하고, 가운데 정렬하세요.
+        $("h1").css("color","red");
+        $("h1").css("text-align","center");
+
+        //체인방식
+        $("h1").css("color","red")
+               .css("text-align","center");
+
+        //JSON방식
+        $("h1").css({
+          "color":"red",
+          "text-align":"center"
+        });
+
+
+        //2. h1요소의 글자크기를 20px, 자간 5px 설정하세요.
+        //JSON방식
+        $("h1").css({
+          "font-size":20,
+          "letter-spacing":5
+        });
+
+        //3. img 요소의 display 속성값을 콘솔창에 출력하세요.
+        var display = $("img").css("display");
+        console.log("display = ", display);
+
+      });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1 class="text-center">css()를 이용한 스타일적용</h1>
+
+    <p><img src="images/flower.jpg" alt="꽃"></p>
+  </div>
+</body>
+</html>

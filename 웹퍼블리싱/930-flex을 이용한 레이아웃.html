@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>930-flex을 이용한 레이아웃</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:700px;
+            margin:30px auto;
+        }
+
+        header,article,footer{border:1px solid black;}
+
+        header{
+            height:148px;
+            line-height:148px;
+            text-align:center;
+        }
+
+        section{
+            display:flex;
+            width: 700px;
+            height:402px;
+            margin:10px 0;
+        }
+
+        section>article{
+            height:400px;
+            line-height:400px;
+            text-align:center;
+        }
+
+        section>.left{
+            width:250px;
+            margin-right:10px;
+        }
+
+        section>.cont{
+            width:436px;
+        }
+
+        footer>address{
+            height:98px;
+            line-height:98px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>헤더 영역</h1>
+        </header>
+
+        <section>
+            <article class="left">서브메뉴</article>
+            <article class="cont">본문내용</article>
+        </section>
+
+        <footer>
+            <address>푸터영역</address>
+        </footer>
+    </div>
+</body>
+</html>

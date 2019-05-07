@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>770-여러개의 박스중 하나를 relative 배치</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p{
+            width:200px;
+            height:200px;
+            margin-bottom:10px;
+            background-color:yellow;
+        }
+
+        p.abs{
+            position:absolute;
+
+            /* 
+                절대위치지정(absolute)의 뜻은 "어떤 기준점을
+                기준으로 좌표설정을 한다"는 뜻이다.
+             */
+
+            left:100px;
+            top:100px;
+            color:white;
+            background-color:red;
+            opacity:0.5;
+        }
+
+        h1{display:none;}
+
+        p.rel{
+            position: relative;
+            /*
+                상대위치지정(relative) 사용시 좌표이동의 기준점은 원래 요소가 위치해 있던 그 지점이 기준점이다.
+            */
+
+
+            left:200px;
+            top:100px;
+            color:white;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+ 
+    <p>박스1</p>
+    <p class="abs">절대위치지정 박스2</p>
+    <p>박스3</p>
+    <p class="rel">상대위치지정 박스4</p>
+    <p>박스5</p>
+    <p>박스6</p>
+
+    <h1>
+        position이 지정된 요소는 HTML 코딩순서와 상관없이 원하는 위치에 배치할 수 있다.
+    </h1> 
+          
+</body>
+</html>

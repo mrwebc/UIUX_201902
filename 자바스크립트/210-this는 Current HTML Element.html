@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>210-this는 Current HTML Element</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //img 요소에 대한 클릭이벤트 구문
+        $("img").on("click", function(){
+
+          //이번에 클릭한 요소의 src 속성값을 콘솔창에 출력
+          var imgSrc = $(this).attr("src");//= Current HTML Element
+
+          console.log("이번에 클릭한 요소의 src 값은 ",imgSrc);
+
+        });
+
+
+      });
+    </script>
+  </head>
+<body>
+  <div id="wrap">
+    <h1 class="text-center">this 이해하기</h1>
+    <h1>이번에 OOO한 바로 그녀석</h1>
+    <p style="text-align:center;">
+      <img src="images/th1.png" alt="#">
+      <img src="images/th2.png" alt="#">
+      <img src="images/th3.png" alt="#">
+      <img src="images/th4.png" alt="#">
+      <img src="images/th5.png" alt="#">
+      <img src="images/th6.png" alt="#">
+      <img src="images/th7.png" alt="#">
+      <img src="images/th8.png" alt="#">
+      <img src="images/th9.png" alt="#">
+    </p>
+  </div>
+</body>
+</html>

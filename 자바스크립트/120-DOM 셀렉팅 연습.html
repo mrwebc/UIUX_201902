@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>120-DOM 셀렉팅 연습</title>
+  <link rel="shortcut icon" href="favicon.ico">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+
+		$(document).on("ready", function(){
+
+			var $h2 = document.getElementById("publisher");//DOM 선택
+
+			$h2.addEventListener("click", function(){
+				alert("h2 제목을 클릭하셨네요~!");
+			});
+
+
+		});
+
+
+	</script>
+</head>
+<body>
+	<h1 id="tit">세계 여러나라의 인사말</h1>
+	<dl>
+		<dt><strong>토속방언</strong> 버전</dt>
+		<dd class="nation greeting">한국 - 식사하셧습니까? 하모~</dd>
+		<dd class="nation greeting">중국 - 츠팔러마? 츠팔러</dd>
+		<dd class="nation greeting">
+			<strong>부시족</strong> 리얼싸운드 -
+			<strong>일렌트로캉막따따라바오리도? 따따라!</strong>
+		</dd>
+	</dl>
+
+	<hr />
+
+	<h2 id="publisher">웹퍼블리셔로 가는길</h2>
+	<ul id="list">
+		<li class="item">HTML5 & CSS3</li>
+		<li class="item">자바스크립트</li>
+		<li class="item"><em>jQuery</em></li>
+		<li class="item">포토샵/일러스트</li>
+		<li class="item"><em>웹디자인기능사</em></li>
+	</ul>
+
+	<script>
+
+		//id를 이용해서 DOM 선택
+		//일반변수와 구별하기 위해 셀렉팅 변수의 이름을 항상 $로 시작
+		var $tit = document.getElementById("tit");
+		console.log("$tit = ", $tit);
+
+
+		$tit.addEventListener("click", function(){
+			alert("제목을 클릭하셨네요~!");
+		});
+
+
+		//Class를 이용해서 DOM을 선택
+		//배열형식으로 저장되지만, 배열 그 자체는 아니다.(지구인의 모습을 한 외계인)
+		var $nation = document.getElementsByClassName("nation");
+		console.log("$nation = ", $nation);
+
+
+		//Tag명을 이용해서 DOM을 선택
+		var $li = document.getElementsByTagName("li");
+		console.log("$li = ", $li);
+
+		console.log("-------------------------");
+
+		//query(쿼리) : 질의하다.
+		//CSS 선택방식으로 하나의 요소만 선택하는 .querySelector()
+		var $publisher = document.querySelector("#publisher");//ID선택
+		console.log("$publisher = ", $publisher);
+
+		var $greeting = document.querySelector(".greeting");//Class 선택
+		console.log("$greeting = ", $greeting);
+
+		var $strong = document.querySelector("strong");//Tag 선택
+		console.log("$strong = ", $strong);
+
+
+		//CSS 선택방식으로 모든 요소를 배열 형식으로 선택하는 .querySelectorAll()
+		var $list = document.querySelectorAll("#list");
+		console.log("$list = ", $list);
+
+
+		var $item = document.querySelectorAll(".item");
+		console.log("$item = ", $item);
+
+
+		var $dd = document.querySelectorAll("dd");
+		console.log("$dd = ", $dd);
+
+
+
+	</script>
+</body>
+</html>

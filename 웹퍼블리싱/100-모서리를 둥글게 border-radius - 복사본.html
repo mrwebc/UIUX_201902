@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델의 모서리를 둥글게 처리하는 border-radius</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        
+        /* id명이 wrap인 모든 (태그)선택자 (*별표 생략되어 있음) */
+        #wrap{
+            font-size:15px;
+            border:1px solid black;
+        }
+
+        /* id명이 wrap인 div 선택자 */
+        div#wrap{
+            border:none;
+        }
+
+
+        /* id명이 wrap인 요소의 직계자식 h1 */
+        #wrap>h1{
+            width:400px;
+            height:200px;
+            border:10px solid blue;
+            border-radius:50px;
+        }
+
+
+        #wrap>p{
+            width:400px;
+            height:200px;
+            border:10px solid pink;
+            border-radius:50px 60px 70px 80px;
+            box-sizing:border-box;/*border 테두리가 박스의 안쪽으로 생성된다*/
+        }
+
+        /* class명이 ball인 모든 요소(선택자) */
+        .ball{color:red;}
+
+        p.ball{
+            width:150px;
+            height:150px;
+            border:5px solid red;
+            box-sizing:border-box;
+            border-radius:75px;
+            background-color:yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <h1 class="ball">코딩컨벤션</h1>
+
+        <p>전체적인 인터페이스 디자인</p>
+
+        <hr>
+
+        <div>
+            <p class="ball">레이아웃</p>
+            <p class="ball">컬러시스템</p>
+            <p class="ball">서체(폰트)</p>
+            <p class="ball">화면코드표</p>
+            <p class="ball">디렉토리 구성규칙</p>
+            <p class="ball">파일명 네이밍규칙</p>
+            <p class="ball">네이밍 예약어</p>
+            <p class="ball">CSS 가이드</p>
+        </div>
+    </div>
+</body>
+</html>

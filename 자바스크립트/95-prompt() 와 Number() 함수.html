@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>95-prompt() 와 Number() 함수</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+	<h1 class="text-center">prompt() 와 Number() 함수</h1>
+	<script>
+		//사용자로부터 값을 입력받는 함수
+		//기본형식 : prompt(안내문,기본값)
+		//prompt("width 값을 입력하세요.",1000);
+
+
+		//prompt() 함수로 입력받은 값은 무조건 문자열로 변환됨
+		var age = prompt("나이를 입력하세요");
+		console.log("age = ", age);
+
+
+		//Number() - 문자숫자를 진짜 연산가능한 숫자로 변환해주는 함수
+		var weight = "65";
+		weight = Number(weight);
+		console.log("weight = ", weight);
+
+		//사용자로부터 입력받은 값을 숫자로 바꾸는 2가지 방법
+
+		//방법1
+		var age = prompt("나이를 입력하세요");
+		age = Number(age);
+
+
+		//방법2
+		var age = Number(prompt("나이를 입력하세요"));
+	</script>
+</body>
+</html>

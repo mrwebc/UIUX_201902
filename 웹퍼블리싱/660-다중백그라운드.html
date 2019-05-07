@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>660-다중백그라운드</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body{
+            background-image:url(./images/sea.jpg);
+            background-size:cover;
+            background-attachment:fixed;/*배경이미지 고정옵션 - 기본값은 scroll*/
+            background-repeat:no-repeat;
+        }
+
+        p{
+            width:800px;
+            height:800px;
+            margin:0 auto;
+            text-indent:-9999px;
+
+            background-image:url(images/daum.png), url(images/naver.png), url(images/google.png), url(images/prince.png);
+            
+
+            background-position:left top, right top, left bottom, right bottom;
+
+            background-size:auto 100px;
+
+            background-repeat:no-repeat;
+
+
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">하나의 요소에 여러개의 배경이미지 넣기</h1>
+        <p>다중백그라운드 박스</p>
+    </div>
+</body>
+</html>

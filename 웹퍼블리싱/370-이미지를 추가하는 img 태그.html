@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>370-이미지를 추가하는 img 태그</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        h1>span{
+            margin:100px 20px;
+            padding:120px;
+            border:1px solid red;
+        }
+
+        /* 
+            img 태그는 inline 요소임에도 불구하고
+            특별히 width, height, 상하margin, 상하padding이
+            적용 가능하다.
+        */
+        img{
+            width:200px;
+            height:200px;
+            margin:100px;
+            padding:20px;
+            border:1px solid black
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            <span>img 태그</span>는 반드시 이미지 그 자체가 컨텐츠에 해당할 때
+            사용하길 권장합니다.
+        </h1>
+<!-- 
+        <img src="경로를 포함한 파일명" alt="이미지가 불의의 사고로 정상적으로 나타나지 못할 때 대신 보여주는 대체텍스트"> -->
+
+        <img src="./images/prince.png" alt="어린왕자 영화상영" title="어린이날 무료입장 이벤트">
+
+        <!-- 이미지의 대체텍스트가 필요없을 경우 alt="#" 처리한다. -->
+        <img width="100" height="100" src="images/submenudot_02_off2.png" alt="#">
+    </div>
+</body>
+</html>

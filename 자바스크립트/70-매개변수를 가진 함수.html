@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>70-매개변수를 가진 함수</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+		<h1 class="text-center">매개변수와 인자의 구분</h1>
+
+		<script>
+
+		/*
+				매개변수를 가진 함수
+
+				선언방법: var (함수)변수 = function(매개변수1, 매개변수2, .... 매개변수n){};
+
+				호출방법: (함수)변수명(인자1, 인자2, .... 인자n);
+
+				** 매개변수 - 함수호출시 인자를 받아 저장하는 역할을 하는 변수
+				** 지역변수 - 함수안에서 선언된 변수
+		*/
+
+			var totMoney = 80000;
+
+			//하나의 매개변수를 가진 save 함수를 선언
+			var save = function(money){
+
+				//totMoney = 원래의총액 + 입금액;
+				totMoney = totMoney + money;
+
+				//console.log("totMoney = ", totMoney);
+
+			};
+
+			//save 함수 호출
+			save(15000);
+
+
+			//주문할 치킨의 개수를 전달받아 주문총액을 출력하는 함수를 선언하세요.
+			//함수명 : chickenTotCalFn,  매개변수명: ea
+			var chicken_price = 18000;
+			var totPrice = 0;
+
+			var chickenTotCalFn = function(ea){
+				totPrice = chicken_price * ea;
+				console.log("주문하신 치킨 개수는 ", ea,"마리");
+				console.log("주문총액은 ", totPrice);
+			};
+
+			chickenTotCalFn(20);
+
+
+
+
+			var hab=0;
+			//두개의 매개변수 one, two를 통해 두 수 100, 200를 전달받아 그 합을 hab 변수에 저장후 콘솔창에 출력하는 sumFn 함수를 선언하고 호출하세요.
+
+			//콘솔창 출력형식 : hab = 300;
+			var sumFn = function(one, two){
+				hab = one+two;
+				console.log("hab = ", hab);
+			};
+
+			sumFn(100,200);
+
+
+
+			// 매개변수 2개이상을 가진 함수를 선언하고, 사용설명서를 작성하세요.
+			// 이 함수는 하루에 걸은 KM를 기입하면 자동적으로
+			// 총 걸은 KM를 계산해주는 함수입니다.
+			// 매일매일 꾸준히 걸어서, 총 10000km를 채워보세요.
+
+			var totKm =0;
+
+			 var walkCal = function(todayKm){
+					totKm= totKm + todayKm;
+					console.log ("지금까지 총 걸은 Km = ",totKm,"km");
+			 };
+
+			 walkCal(20);
+
+		</script>
+</body>
+</html>

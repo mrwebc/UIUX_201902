@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+body{font-size:12px;}
+
+/*공통요소*/
+.sr-only{
+	position:absolute;
+	left:-9999px;
+}
+
+/*레이아웃 */
+#wrap{width:655px;margin:0 auto;}
+
+
+/* header */
+header>h1{
+	background-image:url(../images/banner.jpg);
+	background-repeat:no-repeat;
+}
+
+header>h1>a{
+	display:block;
+	height:308px;
+	text-indent:-9999px;
+}
+
+header>nav>.gnb{*zoom:1;
+
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+
+}
+header>nav>.gnb:after{display:block;clear:both;content:'';}
+
+header>nav>.gnb>li{
+	float:left;
+	width:25%;
+	background-image:url(../images/bg_mnu.png);
+	background-repeat:no-repeat;
+	background-position:20px 2px
+}
+
+header>nav>.gnb>li:hover,
+header>nav>.gnb>li.on{
+	background-position:20px -43px;
+}
+
+
+header>nav>.gnb>li>a{
+	display:block;
+	height:45px;
+	font-weight:800;
+	line-height:45px;
+	text-align:center;
+}
+
+
+/* section */
+section>table>thead>tr>th,
+section>table>tbody>tr>th,
+section>table>tbody>tr>td{
+	height:40px;
+	line-height:1.7;
+	vertical-align:middle;
+	border:1px solid #dedede;
+}
+
+section>table>thead>tr>th{
+	background-color:#EEFFFF;
+	border-top:2px solid #BBDDEE;	
+}
+
+section>table>tbody>tr>td{
+	text-align:center;
+}
+
+section>table>tbody>tr>th{width:70px;}					
+section>table>tbody>tr>td:nth-child(2){width:130px;}					
+section>table>tbody>tr>td:nth-child(3){width:130px;}					
+section>table>tbody>tr>td:last-child{
+	width:325px;
+	padding:5px;
+	text-align:left;
+}
+
+
+/* footer */
+footer{
+	height:130px;
+	background-image:url(../images/bg_bottom.jpg);
+	background-repeat:no-repeat;
+	background-position:-350px 0;	
+}
+
+footer>address{
+	color:#fff;
+	text-align:center;
+	line-height:200px;
+	letter-spacing:1px;
+}

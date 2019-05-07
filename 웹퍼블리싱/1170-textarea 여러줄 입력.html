@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1170-textarea 여러줄 입력</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        textarea{resize:none;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>본문내용 입력폼 - textarea</h1>
+        <form name="fromText" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>상세정보</legend>
+                <table>
+                    <tr>
+                        <th col="row">
+                            <label for="cont">자유입력란 : </label>
+                        </th>
+                        <td>
+                            <textarea rows="10" cols="30"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <p>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>360-입력받은 모든 수를 양수로 출력하기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+        var x = Number(prompt("정수를 입력하세요"));
+        $(".input").text(x);
+
+        if(x<0){
+          x = x * -1;
+        }
+
+        $(".output").text(x);
+
+      });
+    </script>
+</head>
+<body>
+    <body>
+      <div id="wrap">
+        <h1>입력받은 모든 수를 양수로 출력</h1>
+        <h2>입력받은 수 : <span class="input">?</span></h2>
+        <h2>출력된 수 : <span class="output">?</span></h2>
+        <button>입력받기</button>
+      </div>        
+</body>
+</html>

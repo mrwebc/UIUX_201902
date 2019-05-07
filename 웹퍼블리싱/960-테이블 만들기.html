@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>960-테이블 만들기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <style>
+        td, th{
+            width:150px;
+            height:50px;
+            text-align:center;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>table은 반드시 표로된 정보를 나타낼 때만 사용</h1>
+        </header>
+
+        <section>
+
+            <h2>1행 1열 테이블</h2>
+            <table>
+                <tr>
+                    <td>1행1열</td>
+                </tr>
+            </table>
+
+
+            <h2>1행 3열 테이블</h2>
+            <table>
+                <tr>
+                    <td>1행1열</td>
+                    <td>1행2열</td>
+                    <td>1행3열</td>
+                </tr>
+            </table>
+
+            <h2>3행 4열</h2>
+            <table>
+                <tr>
+                    <td>1행1열</td>
+                    <td>1행2열</td>
+                    <td>1행3열</td>
+                    <td>1행4열</td>
+                </tr>
+                <tr>
+                    <td>2행1열</td>
+                    <td>2행2열</td>
+                    <td>2행3열</td>
+                    <td>2행4열</td>
+                </tr>
+                <tr>
+                    <td>3행1열</td>
+                    <td>3행2열</td>
+                    <td>3행3열</td>
+                    <td>3행4열</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <h2>출석부</h2>
+            <table>
+                <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">연락처</th>
+                    <th scope="col">취미</th>
+                    <th scope="col">지역</th>
+                </tr>
+                <tr>
+                    <th scope="row">홍길동</th>
+                    <td>010-3215-2548</td>
+                    <td>달리기</td>
+                    <td>무릉도원</td>
+                </tr>
+                <tr>
+                    <th scope="row">이승기</th>
+                    <td>010-4569-3214</td>
+                    <td>연기,노래</td>
+                    <td>서울</td>
+                </tr>
+            </table>
+
+            <hr>
+
+
+            <h2>colspan(열병합), rowspan(행병합)</h2>
+            <table>
+                <tr>
+                    <td colspan="2">1행1열</td>
+                    <!-- <td>1행2열</td> -->
+                    <td>1행3열</td>
+                    <td>1행4열</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2행1열</td>
+                    <td>2행2열</td>
+                    <td colspan="2" rowspan="2">2행3열</td>
+                    <!-- <td>2행4열</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>3행1열</td> -->
+                    <td>3행2열</td>
+                    <!-- <td>3행3열</td>
+                    <td>3행4열</td> -->
+                </tr>
+            </table>
+
+
+        </section>
+
+        <footer><address>&copy;Designed by 홍길동</address></footer>
+    </div>
+</body>
+</html>

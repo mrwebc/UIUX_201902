@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+#wrap{
+    width: 604px;
+    margin: 0 auto;
+}
+
+section{position: relative;} 
+
+section>ul{} 
+
+section>ul>li{
+    float: left;
+    width: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #000;
+    border-right-width: 0;
+}
+
+section>ul>li:last-child{border-right-width: 1px;}
+
+section>ul>li>a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+} 
+ 
+section>.box{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 602px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+} 
+
+section>.box:target{display:block;}
+/* 
+    .box에 :target 을 설정하면
+    d:b은 해당 a태그 클릭시 그때 href 속성에 지정된 요소에만 적용된다.
+*/
+
+#mnu_1{display: block;}
+ 

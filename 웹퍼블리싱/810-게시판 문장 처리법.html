@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>810-게시판 문장 처리법</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p{
+            width:50%;
+            margin:100px auto;
+            padding:20px;
+            background-color:pink;
+        }
+
+        p.clip{
+            overflow:hidden;
+            white-space:nowrap;/*자동줄바꿈 제거-한줄로 표시*/
+            text-overflow: clip;/*기본값*/
+        }
+
+        p.ellipsis{
+            overflow:hidden;
+            white-space:nowrap;/*자동줄바꿈 제거-한줄로 표시*/
+            text-overflow:ellipsis;/*말줄임표*/
+        }        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">넘치는 텍스트에 대한 처리</h1>
+        <p class="clip">clip - 
+            게시판 글제목과 같은 경우 텍스트가 한줄로 표시되어야 전체적인 레이아웃이 깨지지 않는다.
+            이렇게 하고 싶으면 글 제목이 표시되는 요소에 대해서
+            white-space:nowrap 을 적용하면 텍스트가 줄바꿈 없이 한줄로 표시된다.
+        </p>
+        
+        <p class="ellipsis">ellipsis - 
+            text-overflow 속성은 "white-space:nowrap"과 "overflow:hidden"이 먼저 적용된 경우에 한해서 
+            부여할 수 있는 속성이다.
+            
+            "text-overflow:clip"은 박스를 벗어나는 텍스트를 잘라버리고,
+            "text-overflow:ellipsis"은 말줄임표로 표현한다.
+        </p>
+        
+<!-- 
+    영문자를 띄어쓰기 없이 한줄로 많이 쓸 경우
+    자동줄바꿈이 적용되지 않고 박스를 뚫고 나가는데,
+    이것을 방지하기 위해 word-wrap:break-word;를 적용한다.
+ -->
+        <p class="a" style="word-wrap:break-word;background-color:yellow;">                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+    </div>
+</body>
+</html>

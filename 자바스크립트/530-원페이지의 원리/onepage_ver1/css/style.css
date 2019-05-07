@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+header{
+    position: fixed;
+    right: 10px;
+    /* top: 300px; top값은 자바스크립트에서 설정 */
+}
+
+header>nav>ul>li{margin-bottom: 10px;}
+
+.cont{
+    font-size: 150px;
+    text-align: center;
+}
+
+.con1{
+    height: 1000px;
+    line-height: 1000px;
+    background-color: #ccc;
+}
+
+.con2{
+	height:845px;
+	line-height:845px;
+	background-color:#9f9;
+}
+
+.con3{
+	height:800px;
+	line-height:800px;
+	background-color:#fc9;
+}
+
+.con4{
+	height:600px;
+	line-height:600px;
+	background-color:#990;
+}
+
+.con5{
+	height:1000px;
+	line-height:1000px;
+	background-color:#6fc;
+}

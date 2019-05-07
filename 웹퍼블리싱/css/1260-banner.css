@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+section{}
+
+section>.slides-container{
+	width: 980px;
+	margin: 0 auto;
+}
+
+section>.slides-container>li{
+	overflow: hidden;
+	float: left;
+	width: 140px;
+	transition:all 0.5s ease-in-out 0s;
+}
+
+section>.slides-container:hover>li{width: 50px;}
+section>.slides-container>li:hover{width: 680px;}
+
+section>.slides-container>li>a{
+	display: block;
+	height: 380px;
+}
+
+section>.slides-container>li>a>img{
+	display: block;
+	width: 680px;
+	height: 380px;
+}
+
+
+
+
+
+
+
+
+
+

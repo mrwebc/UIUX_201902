@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1320-페이지에 영상넣기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+		<style>
+			#wrap{width:780px;margin:0 auto;}
+
+			.video-container{height:440px;margin-bottom:100px;}
+			.video-container>video{width:100%;}
+		</style>
+</head>
+<body>
+    <div id="wrap">
+    	<h1 class="text-center">페이지에 영상넣기</h1>
+
+			<div class="video-container">
+				<video controls src="media/kakaopage.mp4"></video>
+			</div>
+
+			<div class="video-container">
+				<video controls poster="images/video.png">
+					<source src="media/kakaopage.mp4" type="video/mp4" />
+					<source src="media/kakaopage.ogg" type="video/ogg" />
+					<source src="media/kakaopage.webm" type="video/webm" />
+					브라우저가 HTML5 Video 태그를 지원하지 않습니다.
+				</video>
+			</div>
+
+			<!--유튜브 영상넣기-->
+			<div class="video-container">
+				<iframe width="780" height="440" src="https://www.youtube.com/embed/UbZL6oEFdP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+    </div>
+</body>
+</html>

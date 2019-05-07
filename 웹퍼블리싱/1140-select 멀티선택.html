@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1140-select 멀티선택</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div id="wrap">
+        <h1>select 다중선택 옵션 - multiple</h1>
+        <form name="frmSelect" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>가봤던 도시</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름 : </label>
+                        <input id="name" type="text">
+                    </li>
+
+                    <li style="margin-top:10px;">
+                        <label for="city">도시선택</label>
+                        <select id="city" multiple>
+                            <option>선택하세요</option>
+                            <option>서울</option>
+                            <option>대전</option>
+                            <option>대구</option>
+                            <option selected>부산</option>
+                            <option>인천</option>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

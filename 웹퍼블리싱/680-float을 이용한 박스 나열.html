@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>680-float을 이용한 박스 나열</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:850px;
+            margin:0 auto;
+            padding-bottom:100px;
+            border:1px solid red;
+        }
+
+        /*
+            float은 반드시 부모자식 관계를 만들어 놓고 작업한다.
+        */
+
+        .study{*zoom:1;}/*구형 브라우저에서 :after 코드를 인식하게 하기 위함*/
+        .study:after{/*플롯으로 인해 주변 요소에 영향이 미치는 것을 차단 (부모가 사고처리를 함)*/
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .study>li{
+            float:left;/* 자식인 li가 사고를 쳤다. */
+            width:200px;
+            height:100px;
+            border:1px solid black;
+        }
+
+        .study>li:nth-child(odd){background-color:yellow;}
+        .study>li:nth-child(even){background-color:pink;}
+
+        /* 
+            .study>li:nth-child(1){float:left;opacity:0.5;}
+            .study>li:nth-child(2){float:left;}
+            .study>li:nth-child(3){float:left;}
+            .study>li:nth-child(4){float:left;} 
+        */
+
+        hr{display:block;margin:50px 0;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">float을 이용한 나열</h1>
+
+        <ul class="study">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ul>
+
+        <p>안녕~!</p>
+
+
+        <hr>
+
+<!--
+	아래의 li를 180*90, 파란테두리를 안쪽으로 생성해서
+	가로로 나열해 보세요. (가세정렬)
+	짝수번째 박스의 배경색을 핑크,홀수번째는 blue로 합니다.
+-->
+<style>
+
+    .subject:after{
+        display:block;
+        clear:both;
+        content:'';
+    }
+    
+    .subject>li{
+        float:left;
+        width:180px;
+        height:90px;
+        line-height:90px;
+        text-align:center;
+        border:1px solid blue;
+        box-sizing:border-box;
+    }
+</style>
+
+        <ol class="subject">
+            <li>포토샵</li>
+            <li>일러스트</li>
+            <li>웹표준</li>
+            <li>UI/UX</li>
+        </ol>
+        
+        <p>추천과목</p>
+
+
+        <hr>
+
+<style>
+    .test:after{
+        display:block;
+        clear:both;
+        content:'';
+    }
+
+    .test>span{
+        float:left;
+        width:120px;
+        height:100px;
+    }
+</style>        
+
+        <!-- 박스사이즈 120*100 만들어서 플롯하세요. -->
+        <div class="test">
+            <span style="background-color:red;">red</span>
+            <span style="background-color:blue;">blue</span>
+            <span style="background-color:green;">green</span>
+            <span style="background-color:yellow;">yellow</span>
+            <span style="background-color:pink;">pink</span>
+        </div>
+        
+        <span>플롯연습</span>
+        
+    
+
+    </div>
+</body>
+</html>

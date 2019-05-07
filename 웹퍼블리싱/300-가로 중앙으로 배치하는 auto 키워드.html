@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>300-가로 중앙으로 배치하는 auto 키워드</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:600px;
+            height:200px;
+            
+            margin:0 auto;
+            /* 
+                부모요소를 기준으로 박스를 가로 중앙에 배치하고자 할 경우 margin:0 auto 를 지정한다.
+            */
+
+            border:1px solid red;
+        }
+
+        h1{
+            width:200px;
+            height:50px;
+            /* margin-left:200px; */
+            margin:75px auto 0;
+            line-height:50px;
+            text-align:center;
+            outline:1px solid blue;/*박스크기에 영향을 미치지 않음*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>auto 키워드</h1>
+    </div>
+</body>
+</html>

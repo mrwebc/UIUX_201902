@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>120-블럭요소와 인라인요소의 특징</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        /* ,(콤마) : 그룹선택자*/
+        h1, span{
+            width:400px;
+            height:200px;
+            background-color:yellow;
+            border:1px solid blue;
+        }
+
+        span+p{
+            width:200px;
+            background-color:red;
+        }
+
+        div{
+            width:80px;
+            height:20px;/* 높이를 정해주면 경우에 따라 overflow 현상이 일어날수 있다. */
+            color:blue;
+            background-color:orange;
+        }
+
+        div~span{
+            background-color:green;
+            border:1px solid red;
+        }
+
+        /*
+            block 요소는
+                width:(부모사이즈의)100% 가 기본이다.
+                height는 컨텐츠양만큼 자동생성
+                자동 줄바꿈 처리
+
+            inline 요소는
+                width, height 모두 컨텐츠양만큼 자동생성
+                width, height 를 설정해도 적용되지 않는다.
+                연속해서 사용할 경우 옆으로 나란히 붙는다.
+
+            => div와 span은 CSS 화면디자인 구성에 필요한만큼 추가해서 사용한다. HTML 문맥의 의미구조에는 아무런 영향도 미치지 못한다.
+        */
+    </style>
+</head>
+<body>
+    <h1>나는 block 요소 h1</h1>
+    <span>나는 inline 요소 span</span>
+    <p>나는 block 요소 p</p>
+    <div>나는 block 요소 div</div>
+
+    <span>나는 인라인요소 span-1</span>
+    <span>나는 인라인요소 span-2</span>
+    <span>나는 인라인요소 span-3</span>
+    <span>나는 인라인요소 span-4</span>
+    <span>나는 인라인요소 span-5</span>
+
+</body>
+</html>

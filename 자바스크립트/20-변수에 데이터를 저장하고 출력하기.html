@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>20-변수에 데이터를 저장하고 출력하기</title>
+    <link rel="shortcut icon" href="favicon.ico">
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+			//준비핸들러
+			$(document).ready(function(){
+
+				//버튼 클릭시 알림창에 본인의 이름이 출력되는 코드를 작성하세요
+				$("button").on("click",function(){
+					alert("내 이름은 캔디~!");
+				});
+
+				//DOM 선택방법 여러가지 중 만능방식 => $()
+				
+				$("태그")//쌍따옴표 사용
+				$("클래스")//쌍따옴표 사용
+				$("아이디")//쌍따옴표 사용
+				$("아이디/태그/클래스혼합")//쌍따옴표 사용
+
+				$(자바스크립트에서 이미 준비된 특별한 변수)//쌍따옴표 미사용 document, this
+
+			});
+		</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">콘솔창에 데이터를 출력하는 방법</h1>
+
+		<p>
+			<button>출력</button>
+		</p>
+
+		<p>
+				변수를 왜 사용할까요? <br>
+				=> 한번이 아니라 여러번 재사용하기 위해서..... <br> <br>
+
+				변수명을 정하는 좋은 습관 <br>
+				1. 영문소문자 띄어쓰기 없이 (대소문자 구별) <br> <br>
+
+				2. 의미있는 짧은 영단어 선택 <br>
+					=> 변수에 담길 값을 설명하는 변수명을 채택하면 <br>
+							  저장된 데이터가 무엇인지 예측할 수 있어서 <br>
+								손쉽게 코드를 작성할 수 있다. <br> <br>
+
+				3. 두단어 이상일 경우 _(언더바) 또는 낙타표기법으로 작성한다. <br> <br>
+
+				4. 숫자로 시작하지 못한다.
+
+		</p>
+	</div>
+
+	<script>
+
+		//자바스크립트 구문
+		console.log(33+33);// + : 산술연산자
+
+		console.log("33");//문자열 출력
+		console.log('33');//문자열 출력
+
+		console.log("33"+33);// + : 연결연산자
+		console.log('삼삼'+'오오');// 연결연산자
+
+		//문제1 -	변수 buscard의 선언과 500 할당을 동시에 하는 코드를 작성하세요.
+		var buscard = 500;
+
+
+		//문제2 - 변수 buscard에 15000이라는 값을 재할당하는 코드를 작성하세요.
+		buscard = 15000;
+
+
+		console.log("buscard = "+buscard);
+
+		console.log("buscard = ",buscard);
+
+        /*
+            학습과제 : 변수 10개를 선언하고,
+            값(숫자, 문자열 섞어서)을 할당후
+            콘솔창에 아래와 같은 형식으로 출력하는 코드를 작성하세요.
+
+            형식) 변수명 = 값;
+
+            ex) pocket = 100 (이런식으로 출력)
+
+        */
+
+				var name = "hong gilng dong";
+				console.log("name = ", name);
+
+	</script>
+</body>
+</html>

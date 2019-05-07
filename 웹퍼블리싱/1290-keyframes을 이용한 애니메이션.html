@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1290-keyframes을 이용한 애니메이션</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+		<style>
+
+/* https://www.w3schools.com/cssref/css3_pr_animation.asp */
+
+			@keyframes mybox{
+				from{width: 100px;}/* 진행률 0%, ~부터 */
+				to{width: 500px;}/* 진행률 100% , ~ 까지*/
+			}
+
+			.box{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background-color: #ff0;
+
+				animation-name:mybox;
+				animation-duration:2s;
+				animation-timing-function:ease-in;/*속도*/
+				animation-iteration-count:infinite;/*무한반복*/
+				animation-direction:alternate;/*반대방향으로 작동*/
+				animation-delay:0s;/*지연시간*/
+			}
+
+			@keyframes mycircle{
+				0%{
+					transform:translate(0,0) rotate(0);
+				}
+
+				50%{
+					transform:translate(200px,200px) rotate(250deg);
+				}
+
+				100%{
+					transform:translate(500px,300px) rotate(360deg);
+				}
+			}
+
+			.circle{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background-color: pink;
+				border-radius: 50px;
+
+				animation:mycircle 2s ease-in infinite alternate 0s;
+			}
+
+			.circle:hover{animation-play-state:paused;}
+		</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">CSS3 keyframes</h1>
+
+		<section>
+			<p class="box">박스</p>
+
+			<p class="circle">원</p>
+		</section>
+
+	</div>
+</body>
+</html>

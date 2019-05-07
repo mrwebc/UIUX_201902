@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>특정위치를 선택하는 nth-child</title> 
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <style>
+            /* 모든 li요소의 글자크기를 30px */
+            ul>li{font-size:30px;}
+            
+            /* 다섯번째 li요소의 글자색을 #f0f로 변경 */
+            ul>li:nth-child(5){color:#f0f;}
+            
+            /* 짝수번째 li요소들의 글자색을 red, 밑줄표시 */
+            ul>li:nth-child(2n){color:red;}
+            ul>li:nth-child(even){text-decoration:underline;}
+            
+            /* 홀수번째 li요소들의 글자굵기 800, 이탤릭체 */
+            ul>li:nth-child(2n+1){font-weight:800;}
+            ul>li:nth-child(odd){font-style:italic;}
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <h1>반복요소를 쉽게 셀렉팅하는 :nth-child()</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>1220-hover, active를 이용한 트랜지션</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#wrap{
+			width: 800px;
+			margin: 0 auto;
+			background-color: #ff0;
+		}
+
+		p.box{
+			width: 100px;
+			height: 200px;
+			background-color: #f00;
+			/*	
+						transition:변화될속성명 지속시간(초) 속도빠르기 지연시간; 
+						
+						트랜지션 설정은 반드시 최초(초기)상태에 설정한다.
+			*/
+			transition:all 3s ease-in-out 0s;
+		}
+
+		p.box:hover{
+			width: 200px;
+			height: 100px;
+			background-color: pink;
+			border-radius: 100px 0;
+		}
+
+		p.box:active{/* 요소위에서 클릭을 하고 있는 동안 작동 */
+			width: 200px;
+			height: 200px;
+			background-color: orange;
+			border-radius: 0 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+	  <h1 class="text-center">CSS3 트랜지션</h1>
+		<p class="box">박스</p>
+
+		<!--
+			요소의 형태/색상등이 변경될 때 CSS3 트랜지션 속성을 적용하여
+			변화하는 단계의 중간 움직임을 자동 생성할 수 있다.
+		-->
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

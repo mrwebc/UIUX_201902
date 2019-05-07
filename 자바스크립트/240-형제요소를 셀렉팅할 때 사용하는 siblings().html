@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>240-형제요소를 셀렉팅할 때 사용하는 siblings()</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style type="text/css">
+		#wrap{width:800px;margin:0 auto;text-align:center;}
+		header>h1{height:100px;line-height:100px;}
+		section{*zoom:1}
+		section:after{display:block;clear:both;content:'';}
+		section>p{
+			float:left;
+			width:100px;height:100px;
+			margin-right:10px;
+			line-height:100px;
+			background-color:#FF0;
+			border:1px solid black;
+		}
+		footer>p{margin:10px 0 ;}
+	</style>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").on("click", function(){
+
+        //1. .box 요소의 모든 형제엘리먼트의 배경색을 pink로 설정하세요.
+        $(".box").siblings().css({
+          "background-color":"pink"
+        });
+
+      });//end of button click
+    });
+  </script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>.siblings( ) 메소드</h1>
+		</header>
+		<section>
+			<p>박스</p>
+			<p>박스</p>
+			<p>박스</p>
+			<p class="box">박스</p>
+			<p>박스</p>
+			<p>박스</p>
+			<p>박스</p>
+		</section>
+		<footer>
+			<button type="button">형제요소 검색</button>
+		</footer>
+	</div>
+</body>
+</html>

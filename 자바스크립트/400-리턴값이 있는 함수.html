@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>400-리턴값이 있는 함수</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      //문제1) 매개변수 value에 한개의 값을 전달받아, 
+      //그 값을 제곱하여 return 하는 square 함수를 선언하세요.
+      var square = function(value){
+        //호출한 곳으로 값을 돌려준다.
+        return value*value;//9
+      };
+
+      var result = square(3);
+      console.log("result = ", result);
+
+      //문제2) 두개의 수를 입력받아 합을 리턴하는 함수를 선언하세요. 
+      //함수명은 add, 매개변수는 num1, num2 로 합니다.  
+      var add = function(num1, num2){
+        return num1+num2;
+      };
+
+      var hab = add(200,100);
+      console.log("hab = ", hab);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

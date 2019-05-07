@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>130-인라인요소처럼 옆으로 붙으면서 블럭처럼 사이즈 적용이 가능한 inline-block</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        p{
+            display:inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        p.box1{background-color:pink;}
+        p.box2{background-color:yellow;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>display:inline-block;</h1>
+
+        <p class="box1">박스1</p><p class="box2">박스2</p>
+
+        <h2>요소간의 줄바꿈은 한칸의 공백으로 인식한다.</h2>
+    </div>
+</body>
+</html>

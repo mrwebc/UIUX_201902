@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1010-시멘틱테이블 완전체</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        table{
+            width:500px;
+            height:200px;
+            margin:0 auto;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            width:40%;
+            height:40px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        th:first-child,
+        td:first-child{
+            width:20%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">모바일 시장점유율</h1>
+
+    <table>
+        <caption>최근 2년간 전세계 시장점유율</caption>
+        <colgroup>
+            <col style="background-color:yellow;">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="row">구분</th>
+                <th scope="col">삼성</th>
+                <th scope="col">애플</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row">총계</th>
+                <td>35%</td>
+                <td>65%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">2018년</th>
+                <td>40%</td>
+                <td>60%</td>
+            </tr>
+            <tr>
+                <th scope="row">2019년</th>
+                <td>30%</td>
+                <td>70%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

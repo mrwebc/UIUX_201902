@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>1030-출석부만들기(테이블완전체)</title>
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="css/reset.css">
+        <style>
+            table{
+                width: 600px;
+                margin: 0 auto;
+                border-collapse:collapse
+            }
+          
+            th, td{
+                width: 40%;
+                height: 50px;
+                text-align:center;
+                vertical-align: middle;
+                border:1px solid black;
+            }    
+
+            th:first-child, td:first-child{
+                width:20%;
+            }    
+        </style>
+    </head>
+    
+    <body>
+        <div id="wrap">
+            <h1 class="text-center">출석부</h1>
+            
+             <table>
+                <caption>웹표준퍼블리싱반</caption>
+                <colgroup>
+                   <col>
+                   <col>
+                   <col>
+                </colgroup>
+                <thead>
+                   <tr>
+                      <th scope="col">이름</th>
+                      <th scope="col">전화번호</th>
+                      <th scope="col">입학년월</th>
+                   </tr>
+                </thead>
+                <tfoot>
+                   <tr>
+                      <th scope="row">통계</td>
+                      <td>SK텔레콤</td>
+                      <td>2018년 하반기</td>
+                   </tr>				
+				</tfoot>
+                <tbody>
+                   <tr>
+                      <td>홍길동</td>
+                      <td>010-2580-2580</td>
+                      <td>2018-08-06</td>
+                   </tr>
+                   <tr>
+                      <td>송중기</td>
+                      <td>010-1588-1588</td>
+                      <td>2018-09-09</td>
+                   </tr>
+                   <tr>
+                      <td>장보리</td>
+                      <td>010-1644-0599</td>
+                      <td>2018-10-09</td>
+                   </tr>
+                </tbody>
+				
+             </table>   
+        </div>
+    </body>
+</html>

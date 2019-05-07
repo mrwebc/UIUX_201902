@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>260-형제 관계의 margin</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        h1{display:none;}/*flow에서 삭제됨*/
+
+        .parent{
+            width:600px;
+            height:500px;
+            border:1px solid red;
+        }
+
+        .parent>p{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        /* 문제1) 클래스명이 child_1인 p태그에게 윗마진 100px 적용 */
+        .parent>.child_1{
+            margin-top:100px;
+            /* margin-right:100px; */
+            margin-left:200px;
+            background-color:yellow;
+        }
+
+        /* 문제2) 클래스명이 chlid_1인 요소에게 오른마진 100px, 왼마진 200px을 적용하세요. */
+
+        .parent>.child_2{margin-left:100px;background-color:green;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>형제관계의 마진</h1>
+
+        <div class="parent">
+            <p class="child_1">자식1</p><p class="child_2">자식2</p>
+        </div>
+    </div>
+</body>
+</html>

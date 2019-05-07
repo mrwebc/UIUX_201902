@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>490-페이지를 이동하는 하이퍼링크</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p>a{
+            display:block;
+            width:300px;
+            height:50px;
+            margin:0 auto 50px;
+            line-height:50px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        p>a:hover{background-color:yellow;}
+
+        p>a>img{width:100%;height:100%;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">원하는 문서나 사이트로 링크연결</h1>
+
+        <p>
+            <a href="http://www.naver.com">네이버(외부사이트 이동)</a>
+
+            <a href="430-엔티티코드를 이용한 태그출력.html">엔티티코드(내부페이지 이동)</a>
+
+            <a href="https://www.daum.net/" target="_blank">Daum Kakao(새창에서 열기)</a>
+
+            <a href="80-어린왕자.html" title="어린왕자 페이지로 이동">
+                <img src="./images/prince.png" alt="어린왕자">
+            </a>
+
+            <a href="mailto:mvcweb@naver.com">안쌤에게 메일발송</a>
+
+            <a href="https://youtu.be/IvsHlMDeWsM" target="_blank">유튜브 실행</a>
+
+            <a href="http://maps.google.com/maps?q=gangnam&z=16">구글맵</a>
+
+            <!-- 모바일폰 에서만 작동하는 전화/문자발송 -->
+
+            <a href="tel:01072943724">안쌤에게 전화하기</a>
+
+            <a href="sms:01072943724">안쌤에게 SMS발송</a>
+        </p>
+    </div>
+</body>
+</html>

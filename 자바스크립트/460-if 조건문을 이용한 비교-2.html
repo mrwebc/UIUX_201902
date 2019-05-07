@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>460-if 조건문을 이용한 비교-2</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+        var gender = "화성인";
+        var result;
+
+        //만약 "남자" 또는 "여자"라면 ~~하고 그렇지 않으면 ~~
+        if(gender=="남자" || gender=="여자"){
+          result = "사람";
+        }else{
+          result = "외계인"
+        }
+
+        $(".result").text(result);
+      });
+    </script>
+</head>
+<body>
+  <h1 class="text-center">
+    당신은 <span class="result">~~</span> 입니다.
+  </h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>410-setInterval()-움직이는 파비콘</title>
+    <link id="fav" rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      
+      var i=0;//파일명의 넘버
+
+      setInterval(function(){
+
+        if(i<20){
+          i++;
+        }else{
+          i=1;
+        }
+
+        //console.log("i = ",i);
+        
+        $("#fav").attr("href","images/"+i+".ico");
+
+      },50);
+
+
+    </script>
+</head>
+<body>
+  <h1>움직이는 파비콘 구현</h1>
+</body>
+</html>

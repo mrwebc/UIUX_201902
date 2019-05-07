@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>580-CSS 특정도값</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        h1{ /* 특정도값 : 1점 */
+            color:red;
+            font-size:50px;
+        }
+
+        h1{color:blue;}/* 특정도값 : 1점 */
+
+        #logo{color:green;}/* 특정도값 : 100점 */
+
+        .uiux{color:black;}/* 특정도값 : 10점 */
+
+        h1#logo.uiux+ul>li.vscode+li{/* 특정도값 : 124점 */
+            font-weight: 800;
+        }
+
+        ul>li:nth-child(4){/* 특정도값 : 12점 */
+            font-weight: 800 !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="logo" class="uiux">CSS 구체성 단위</h1>
+        <ul>
+            <li>태그는 1점</li>
+            <li>클래스 10점, 가상선택자 10점</li>
+            <li class="vscode">아이디 100점</li>
+            <li style="font-weight:400;">인라인 방식으로 CSS를 주면 1000점</li>
+            <li>!important - 이렇게 하면 최우선</li>
+        </ul>
+    </div>
+</body>
+</html>

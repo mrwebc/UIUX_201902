@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1300-position 좌표설정과 keyframes</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+		<style>
+			#wrap{
+				position: relative;
+				width: 960px;
+				height: 477px;
+				margin: 0 auto;
+
+				background-image: url(images/visual.jpg);
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			@keyframes satellite{
+				100%{
+					left: 670px;
+					top: 30px;
+					transform:rotate(-30deg);
+				}
+			}
+
+			.satellite{
+				position: absolute;
+				left: 660px;
+				top: 20px;
+				width: 48px;
+
+				animation:satellite 2s ease-in-out infinite alternate 2s;
+			}
+
+			@keyframes ufo{
+				25%{left:150px;transform:scale(0.5) rotate(720deg) skew(2000deg)}
+
+				50%{left:160px;top:250px;transform:rotate(360deg) skew(-100deg)}
+
+				75%{left:250px;top:200px;}
+
+				100%{left:430px;top:250px;}
+			}
+
+			.ufo{
+				position: absolute;
+				left: 100px;
+				top: 50px;
+				width: 32px;
+
+				animation:ufo 10s ease-in-out infinite alternate 0s;
+			}
+		</style>
+</head>
+<body>
+	<div id="wrap">
+		<img class="satellite" src="images/icon_v04.png" alt="위성">
+
+		<img class="ufo" src="images/icon_v01.png" alt="UFO">
+	</div>
+</body>
+</html>

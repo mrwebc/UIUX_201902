@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>160-line-height 사용법과 가세정렬</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <style>
+        *{margin:0;padding:0;}
+
+        h1{
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            background-color:pink;
+        }
+
+        p{
+            width:600px;
+            height:300px;
+
+            line-height:50px;
+            line-height:400%;/*기본값 120%*/
+            line-height:5;/*=500%*/
+
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>line-height와 가로세로 중앙정렬</h1>
+
+        <p>
+            line-height: ~ px; <br>
+            line-height: ~ %; <br>
+            line-height: 숫자
+        </p>
+
+        <hr>
+
+        <h2>가세정렬법</h2>
+        <p>
+            1. 가로 중앙은 text-align:center; <br>
+            
+            2. 세로 중앙은 line-height 값을 박스의 높이(height)와 일치시킨다. <br>
+
+            3. 이 가세정렬은 박스안의 문장이 한줄일때만 효과있음
+        </p>
+    </div>
+</body>
+</html>

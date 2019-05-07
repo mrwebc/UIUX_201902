@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>740-float에 float으로 대응한 자연마감</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:1080px;
+            margin:100px auto;
+        }
+
+        .header{
+            width:1080px;
+            height:50px;
+            *zoom:1;
+        }
+
+        .header:after{
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .header>h1{
+            float:left;
+            width:200px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            background-color:pink;
+        }
+
+        .header>.gnb{
+            float:left;
+            overflow:hidden;
+            width:830px;
+            height:50px;
+            margin-left:50px;
+        }
+
+
+        .header>.gnb>li{
+            float:left;
+            width:200px;
+            height:50px;
+            margin-right:10px;
+            color:white;
+            line-height:50px;
+            text-align:center;
+            background-color:blue;
+        }
+
+        .header>.gnb>li:last-child{margin-right:0;}
+
+        .section{
+            height:400px;
+            margin:10px 0;
+            line-height:400px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        .footer{
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <h1>한국무역협회</h1>
+            <ul class="gnb">
+                <li>무역통상정보</li>
+                <li>회원/업무지원</li>
+                <li>무역통계</li>
+                <li>협회안내</li>
+            </ul>
+        </div>
+
+        <div class="section">본문내용</div>
+
+        <div class="footer">꼬리말</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>600-배경이미지 반복 설정</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p{
+            width:500px;
+            height:150px;
+            margin:0 auto 20px;
+            line-height:150px;
+            text-align:center;
+            border:1px solid black;
+        }
+
+        p.repeat-x{
+            background-image:url(./images/pattern.jpg);
+            background-repeat:repeat-x;
+        }
+
+        p.repeat-y{
+            background-image:url(./images/pattern.jpg);
+            background-repeat:repeat-y;
+        }
+
+        p.repeat{
+            background-image:url(./images/pattern.jpg);
+            /* background-repeat:repeat; 기본값 */
+        }
+
+        p.no-repeat{
+            background-image:url(./images/pattern.jpg);
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">background-repeat 속성</h1>
+        <p class="repeat-x">x좌표로만 반복</p>
+        <p class="repeat-y">y좌표로만 반복</p>
+        <p class="repeat">x,y 자표로 모두 반복</p>
+        <p class="no-repeat">반복안함</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-yoons_recruit_chief_bg_01 {
+    width: 64px;
+    height: 89px;
+    background-position: -173px -173px;
+}
+
+.sprite-yoons_recruit_chief_bg_02 {
+    width: 58px;
+    height: 81px;
+    background-position: -583px -173px;
+}
+
+.sprite-yoons_recruit_chief_bg_03 {
+    width: 60px;
+    height: 90px;
+    background-position: -987px -173px;
+}

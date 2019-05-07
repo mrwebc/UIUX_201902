@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>셀렉팅 집합에서 조건에 맞는 요소를 선택</title>
+	<style>
+		*{margin:0;padding:0;}
+		#wrap{
+			width:800px;
+			margin:0 auto;
+			text-align:center;
+		}
+		
+		h1{
+			height:100px;
+			line-height:100px;
+			font-size:25px;
+		}
+		
+		p{
+			height:48px;
+			line-height:48px;
+			margin-bottom:15px;
+			font-size:20px;
+		}
+		
+		.yellow{background-color:yellow}
+	</style>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function(){
+      //1. p태그 중 짝수번째(인덱스기준)에 해당하는 요소에 pink 배경을 적용하는 코드를 작성하세요.
+      $("p").filter(":even").css({
+        "background-color":"pink"
+      });
+
+
+      //2. on 클래스를 가지고 있는 p 태그에 요소에 .yellow 클래스를 추가하세요.
+      $("p").filter(".on").addClass("yellow");
+    });
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>매개변수로 익명함수를 전달받는 filter() 메소드</h1>
+		<p>텍스트문단 - 0</p>
+		<p>텍스트문단 - 1</p>
+		<p>텍스트문단 - 2</p>
+		<p class="on">텍스트문단 - 3</p>
+		<p>텍스트문단 - 4</p>
+	</div>
+</body>
+</html>
+

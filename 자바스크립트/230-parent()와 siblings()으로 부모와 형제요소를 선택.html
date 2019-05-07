@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>230-parent()와 siblings()으로 부모와 형제요소를 선택</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //문제1) h1을 클릭하면 h1의 부모요소에 검정색 테두리를 1px로 설정하세요.
+        $("h1").on("click", function(){
+          $(this).parent().css({
+            "border":"1px solid black"
+          });
+        });//end of h1 click
+
+        //문제2 li.me 요소를 클릭하면 좌우 형제 li요소의 CSS속성이 다음과 같이 설정되도록 코드를 작성하세요.  (font-size:35px, 배경색:노랑, 파란색의 글자로)
+        $("li.me").on("click", function(){
+          $(this).siblings().css({
+            "font-size":35,
+            "background-color":"yellow",
+            "color":"blue"
+          });
+        });//end of li.me click
+
+      });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+           <h1>.parent() 메소드는 직계부모를 셀렉팅</h1>
+        </header>
+        <section>
+           <h2>siblings 구조</h2>
+           <ol>
+              <li>데이터 타입과 연산자</li>
+              <li>.addClass( )</li>
+              <li>자바스크립트 함수</li>
+              <li class="me">다중셀렉팅</li>
+              <li>제이쿼리로 CSS 스타일 정보 변경 및 가져오기</li>
+              <li>siblings 구조</li>
+           </ol>
+        </section>      
+     </div>
+</body>
+</html>

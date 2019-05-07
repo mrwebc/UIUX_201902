@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>BoxModel(태그)의 형태 - 상자형태</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        h1{
+            display:block;/*기본값*/
+            display:inline;
+
+            width:400px;
+            height:400px;
+
+            color:blue;
+            border:1px solid red;/*바깥쪽 테두리*/
+
+            border-width:1px;
+            border-style:solid;
+            border-color:red;
+        }
+
+        /* > : 직계자식연산자 */
+        div>p{
+            display:block;
+            color:red;
+            border:1px solid blue;
+        }
+
+        /* 
+            + : 인접형제(동기)연산자
+            div와 형제이면서 div 바로 다음에 나오는 p
+        */
+        div+p{
+            display:block;
+            border:1px solid red;
+        }
+
+        /*
+            ~ : 인접형제(동기)연산자
+            div와 형제이면서 div 이후에 나오는 모든 p
+        */
+        div~p{
+            display:block;
+            color:blue;
+            background-color:yellow;
+        }
+
+
+        /* css 속성은 property 라고 부른다. */
+
+        span{
+            display:inline;/*기본값*/
+            background-color:pink;
+            border:1px solid blue;
+        }
+
+        img{
+            display:inline;
+            border:5px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹브라우저는 모든 HTML 요소(태그)를 하나의 박스로 표현</h1>
+
+    <div>
+        <p>첫번째 블럭요소</p>
+        <p>두번째 블럭요소</p>
+        <p>세번째 블럭요소</p>
+    </div>
+
+    <p>네번째 블럭요소</p>
+    <p>다섯번째 블럭요소</p>
+
+    <hr>
+
+    <span>나는               스팬1</span>
+    <span>나는         스팬2</span>
+    <span>나는    스팬3</span>
+
+    <!-- src 속성(attribute) -->
+    <img src="images/4.jpg" alt="전시회일정">
+</body>
+</html>

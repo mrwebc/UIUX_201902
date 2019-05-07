@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>380-증감 연산자</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+
+        var a = 200;
+        var b = 100;
+
+        a++;//a=a+1;  a+=1; 예상결과:201
+        console.log("a++ 하면 ", a);
+
+        b--;//b=b-1;  b-=1; 예상결과:99
+        console.log("b-- 하면 ", b);
+
+        $(".result").text(a+b);
+
+        a+=b; 
+        $(".hab").text(a);
+
+        a-=b;
+        $(".cha").text(a);
+
+        a*=b;
+        $(".kob").text(a);
+
+        a/=b;
+        $(".na").text(a);
+
+        a%=b;
+        $(".gi").text(a);
+
+      });
+    </script>
+</head>
+<body>
+  <div id="wrap" style="text-align:center;">
+    <h1>데이터 처리와 연산자</h1>
+  
+    <p> 두수의 합은 <span class="result"></span></p>
+    
+    <div>
+     <p>a += b 했을 때 a = <span class="hab"></span></p>
+     <p>a -= b 했을 때 a = <span class="cha"></span></p>
+     <p>a *= b 했을 때 a = <span class="kob"></span></p>
+     <p>a /= b 했을 때 a = <span class="na"></span></p>
+     <p>a %= b 했을 때 a = <span class="gi"></span></p>
+    </div>
+     
+  </div>    
+  
+</body>
+</html>

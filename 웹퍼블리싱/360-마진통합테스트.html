@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>마진통합테스트</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style type="text/css">
+			.grid {
+				width: 600px;
+				height: 300px;
+				margin: 0 auto 20px;
+				background-image: url(images/bg_grid.png);
+				border: 1px solid #dedede
+			}
+			
+			p {
+				width: 150px;
+				height: 62px;
+				margin: 0 auto;
+				border: 5px solid blue;
+				font-weight: 800;
+				text-align: center;
+				line-height: 62px;
+			}
+			
+			.box_2{border-color: red;}			
+			.box_3{border-color: green}			
+			#horizontal{height: 100px;}
+			
+			#horizontal p {
+				display: inline-block;
+				width: 100px;
+			}
+
+			
+			
+			/* 마진통합테스트 - 세로 */
+			#vertical>.box_1{}
+			#vertical>.box_2{}
+			#vertical>.box_3{}
+			
+			
+			/* 마진통합테스트 - 가로 */
+			#horizontal>.box_1{}
+			#horizontal>.box_2{}
+			#horizontal>.box_3{}
+			
+			
+		</style>
+	</head>
+	<body>
+
+		<h1 class="text-center">마진통합현상</h1>
+		<div id="vertical" class="grid">
+			<p class="box_1">box_1</p>
+			<p class="box_2">box_2</p>
+			<p class="box_3">box_3</p>
+		</div>
+
+		<div id="horizontal" class="grid">
+			<p class="box_1">box_1</p><p class="box_2">box_2</p><p class="box_3">box_3</p>
+		</div>
+
+	</body>
+</html>

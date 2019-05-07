@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>920-박스를 나열하는 최신기술 - flex</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:90%;
+            margin:0 auto;
+            border:1px solid black;
+        }
+
+        section{
+
+            /* 부모에게 설정, 만약 아이템(박스)의 높이가 설정되어 있지 않으면 height값이 부모의 100%가 된다. */
+            display:flex;
+
+            flex-flow:nowrap;/*기본값-가로는 부모의 가로폭 범위안에서 비율대로 자동계산되어 적용(drop현상 미발생)*/
+
+            /* flex-flow:wrap; - 플롯한것처럼 부모의 가로폭이 자식을 감당하지 못할경우 drop 현상이 발생한다.*/
+
+            justify-content:flex-start;/*기본값 - 나열과 관련이 있는 속성*/
+
+            justify-content: flex-end;/* 플렉스 아이템을 오른쪽 끝에 맞춤 */
+
+            justify-content: space-between;/*좌우 아이템을 양끝에 붙이고 나머지는 동일 간격으로 나열*/
+
+            justify-content: space-around;/* 양끝에 약간의 여백을 준 상태에서 나머지를 동일 간격으로 나열 */
+
+
+            
+            height:500px;
+        }
+
+        p{height:300px;}
+
+        /* order 속성으로 아이템(박스)의 나열순서를 조정할 수 있다. */
+
+        .red{order:200;width:20%;background-color:red;}
+        .blue{order:300;width:200px;background-color:blue;}
+        .yellow{order:100;width:40%;background-color:yellow;}
+        .green{order:500;width:100px;background-color:green;}
+        .orange{order:400;width:50px;background-color:orange;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section>
+            <p class="red">red</p>
+            <p class="blue">blue</p>
+            <p class="yellow">yellow</p>
+            <p class="green">green</p>
+            <p class="orange">orange</p>
+        </section>
+    </div>
+</body>
+</html>

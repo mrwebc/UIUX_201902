@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>라이트박스 기초-4</title>
+  <link rel="stylesheet" href="../css/reset.css">
+	<style type="text/css">
+		h1{height:100px;line-height:100px;text-align:center;}
+		
+		a.book{
+			display:inline-block;
+			width:140px;
+			height:190px;
+		}
+		
+		a.book>img{
+			width:100%;
+			height:100%;
+		}
+
+		.shadow{
+			display: none;
+			position: fixed;/*무조건 body가 기준*/
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: #000;
+			opacity: 0.75;
+		}
+		
+		.lightbox{
+			display:none;
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:400px;
+			height:500px;
+			margin:-250px 0 0 -200px;
+			background-color:orange;
+		}
+
+		.lightbox>.clse{
+			background: none;
+			border: none;
+			outline: none;
+
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: -40px;
+			width: 50px;
+			height: 35px;
+			color: #fff;
+			line-height: 35px;
+			border: 1px solid #fff;
+		}
+		
+		.lightbox>img{
+			width:100%;
+			height:100%;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+
+		$(function(){
+
+			var $lightbox = $(".lightbox");
+
+			$(".book").on("click", function(evt){
+				evt.preventDefault();
+
+				//라이트박스 안의 이미지에 넣을 정보를 가져온다.
+				var imgSrc = $(this).attr("href");
+				var imgAlt = $(this).children("img").attr("alt");
+
+				//가져온 정보를 넣어준다.
+				$lightbox.children("img").attr({
+					"src" : imgSrc,
+					"alt" : imgAlt
+				});
+
+				//그림자 노출
+				$(".shadow").show();
+
+				//라이트박스를 노출시킨다.
+				$lightbox.show();
+				
+			});//end of .book click
+
+
+			//닫기버튼에 대한 클릭이벤트 구문
+			$(".clse").on("click", function(){
+				//$lightbox.hide();
+				//$(".shadow").hide();
+
+				$(this).parent().hide().prev().hide();
+			});
+
+		});
+
+	</script>	
+</head>
+<body>
+	<h1 class="text-center">확대이미지</h1>
+	<div>
+
+    <a href="../images/book_1.png" class="book"><img src="../images/thumb_1.png" alt="반응형 웹퍼블리싱" /></a>
+    
+    <a href="../images/book_2.png" class="book"><img src="../images/thumb_2.png" alt="UX/UI 디자인" /></a>
+    
+	</div>
+
+	<div class="shadow"></div>
+
+	<div class="lightbox">
+		<img src="#" alt="#">
+		<button class="clse">닫기</button>
+  </div>
+</body>
+</html>
+
+
+

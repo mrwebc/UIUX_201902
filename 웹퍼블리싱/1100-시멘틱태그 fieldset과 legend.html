@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1100-시멘틱태그 fieldset과 legend</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div id="wrap">
+        <h1>여러 From 요소들을 각각의 그룹으로 묶는 역할</h1>
+
+        <form name="frmLogin" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>기본정보</legend>
+                <ul>
+                    <li>
+                        <label for="secure_num">개인사번</label>
+                        <input id="secure_num" type="text">
+                    </li>
+                    <li>
+                        <label for="pwd">패스워드</label>
+                        <input id="pwd" type="password">
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>금융정보</legend>
+                <ul>
+                    <li>
+                        <label for="account">급여계좌</label>
+                        <input id="account" type="text">
+                    </li>
+                    <li>
+                        <label for="password">비밀번호</label>
+                        <input id="password" type="password">
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <button type="submit">전송</button>
+                <button type="reset">재입력</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

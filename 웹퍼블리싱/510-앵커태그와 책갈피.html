@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>앵커태그의 활용과 북마크(책갈피)</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width:800px;
+            margin: 30px auto 0;
+        }
+
+        p>a{
+            display:inline-block;
+            width:200px;
+            height:107px;
+            border:1px solid black;
+        }
+
+        p>a.frst{margin-left:90px;}
+
+        p>a>img{width:100%;}
+
+        p~div{
+            height:1000px;
+            border:1px solid black;
+        }
+
+        #daumkakao{
+            background-color:yellow;
+        }
+
+        #google{background-color:pink;}
+        #naver{background-color:aqua;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">페이지내의 북마크(책갈피) 지점으로 이동</h1>
+
+        <p>
+            <a href="#daumkakao" class="frst">
+                <img src="./images/daum.png" alt="다음카카오">
+            </a> 
+
+            <a href="#google">
+                <img src="./images/google.png" alt="구글">
+            </a> 
+
+            <a href="#naver">
+                <img src="./images/naver.png" alt="네이버">
+            </a> 
+        </p>
+
+        <!-- 아래의 id는 북마크 기능을 구현하는데 필수속성 -->
+        <div id="daumkakao">다음카카오</div>
+        <div id="google">구글</div>
+        <div id="naver">네이버</div>
+    </div>
+</body>
+</html>

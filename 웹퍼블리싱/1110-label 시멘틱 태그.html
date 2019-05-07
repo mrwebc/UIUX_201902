@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1110-label 시멘틱 태그</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        *{margin:0;padding:0;}
+        h1, form, legend, dl, p{margin:20px;}
+        dl{*zoom:1;}
+        dl:after{display:block;clear:both;content:'';}
+        dt{float:left;margin-right:10px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>주문정보</h1>
+        <form name="frmOrder" action="1080-login_ok.html" method="POST">
+            <fieldset>
+                <legend>상품주문정보</legend>
+                <dl>
+                    <dt><label for="order_name">이름 : </label></dt>
+                    <dd><input id="order_name" type="text"></dd>
+
+                    <dt><label for="hp">연락처 : </label></dt>
+                    <dd><input id="hp" type="number"></dd>
+
+                    <dt><label for="address">주소 : </label></dt>
+                    <dd><input id="address" type="text"></dd>
+                </dl>
+                <p>
+                    <button type="submit">전송</button>
+                    <button type="reset">재입력</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>90-연관데이터 저장에 유용한 객체변수</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<h1 class="text-center">연관데이터를 꾸러미로 저장하는 (객체)변수</h1>
+
+	<script>
+
+	  // 일반변수는 의미파악이 원활하지만
+		// 데이터가 각각 흩어져 있어서 저장 구조는 비효율적
+		// 한 사람과 관련된 데이터를 저장
+		var name = "홍길동";
+		var age = 18;
+		var id = "hong";
+
+
+		// 배열변수는 데이터 저장구조는 효율적이지만,
+		// 저장된 데이터 각각의 직관적 의미파악은 어렵다.
+		// 한 사람과 관련된 데이터를 저장
+		var iyou = ['아이유', 27, 'IY', '부산'];
+
+
+		// 객체변수는 데이터 저장구조가 효율적이면서,
+		// 동시에 데이터 각각의 직관적 의미파악도 가능하다.
+		// 한 사람과 관련된 데이터를 저장
+		var iu = {
+			name : '아이유",
+			age : 27,
+			id : 'IU',
+			address : '대한민국 서울'
+		};
+
+		console.log(iu.name);
+		console.log(iu.age);
+		console.log(iu.id);
+		console.log(iu.address);
+
+	</script>
+</body>
+</html>

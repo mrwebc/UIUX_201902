@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+.sr-only{
+    position: absolute;
+    left: -9999px;
+}
+ 
+body{font-size:11px;font-family:돋움;background-color:#394753;}
+
+#wrap{
+    width:700px;
+    margin:0 auto;
+    background-color:white;
+}
+
+header>.logo{}
+
+header>.logo>a{
+    display:block;
+    height:100px;
+    color:#394753;
+    font-size:29px;
+    line-height:100px;
+    text-indent:20px;
+}
+
+
+header>nav{}
+
+header>nav>.gnb{
+    display:flex;
+    justify-content:flex-end;
+    background-color:#394753;
+}
+
+header>nav>.gnb>li{
+    border:1px solid black;
+    border-right:none;
+    border-right:0;
+}
+
+header>nav>.gnb>li:last-child{border-right:1px solid black;}
+
+header>nav>.gnb>li>a{
+    display:block;
+    height:26px;
+    color:white;
+    font-weight:800;
+    padding:0 15px;
+    line-height:26px;
+}
+
+header>nav>.gnb>li:hover>a,
+header>nav>.gnb>li.on>a{
+    background-color:white;
+    color:black;
+}
+
+.mainbanr{
+    height:250px;
+    background-image:url(../images/header.jpg);
+    background-size:cover;
+}
+
+.mainbanr>a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-indent:-9999px;
+}
+
+.cont{
+    display:flex;
+    justify-content: space-around;
+}
+
+.cont>article{
+    width:210px;
+    margin:15px 5px 5px 5px;
+    background-color:#f9f9f9;
+    border:1px solid #aaa;
+}
+
+.cont>article>h3{
+    margin:5px 5px 2px;
+    font-size:12px;
+}
+
+.cont>article>p{
+    padding:5px;
+    line-height:1.4;
+}
+
+.cont>article>h3+p{
+    *zoom:1;
+}
+
+.cont>article>h3+p:after{
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.cont>article>p>.frame{
+    display:block;
+    float:right;    
+    width:75px;
+    height:75px;
+    margin:-33px -10px 1px 2px ;
+    border:1px solid #bbb;
+}
+
+.cont>article>p>.frame>img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.cont>article>dl{
+    margin:15px 0 0 10px;
+}
+
+.cont>article>dl>dt{
+    margin-top:10px;
+}
+
+
+footer{
+    margin-top:10px;
+    background-color:#394753
+}
+
+footer>address{
+    height:30px;
+    color:white;
+    line-height:30px;
+    text-align:center;
+}

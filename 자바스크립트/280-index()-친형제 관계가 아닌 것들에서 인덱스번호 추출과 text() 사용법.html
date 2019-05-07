@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>280-index()-친형제 관계가 아닌 것들에서 인덱스번호 추출과 text() 사용법</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+        #wrap{
+            width:800px;
+            margin:0 auto;
+        }
+
+        h1{line-height:100px;text-align:center;}
+
+        ol>li{
+            list-style:none;
+            height:50px;
+            margin-bottom:20px;
+            font-size:20px;
+            line-height:50px;         
+            text-align:center;   
+            border:1px solid #ccc;
+        }
+
+        ol>li:nth-child(odd){background-color:pink;}
+        ol>li:nth-child(even){background-color:#dedede;}
+
+        p{text-align:center;}
+        p>span{color:#f00;font-size:30px;}
+
+    
+    </style>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        
+        var nowIdx;
+
+        $("li>a").on("click",function(){
+
+          nowIdx = $("li>a").index(this);
+          //이 방식은 친형제 관계 뿐만 아니라 어떤 촌수 관계에서도 무조건 100% 잘 작동함(만능방식)
+
+          $("span").text(nowIdx);
+
+        });
+      });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제이쿼리 메소드(API)의 분류</h1>
+        
+        <ol class="jquery">
+            <li><a href="#">셀렉팅 메소드</a></li>
+            <li><a href="#">이벤트 메소드</a></li>
+            <li><a href="#">내용조작 메소드</a></li>
+            <li><a href="#">이펙트/효과 메소드</a></li>
+        </ol>
+        
+        <p>현재 선택된 li>a의 index = <span>?</span></p>
+    </div>    
+</body>
+</html>

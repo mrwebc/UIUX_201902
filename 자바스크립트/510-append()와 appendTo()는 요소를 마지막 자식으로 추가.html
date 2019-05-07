@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>510-append()와 appendTo()는 요소를 마지막 자식으로 추가</title>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      //선택요소에 ㅇㅇ을 마지막 자식으로 추가하겠다.
+      $("ol").append("<li>동적기능의 추가</li>");
+      $("ol").append("<li>개발자-존레식</li>");
+      $("ol").append("<li>순서있는 목록 태그</li>");
+
+
+      //ㅇㅇ을 마지막 자식으로 선택요소에 추가하겠다.
+      $("<li>정말 쉽고 간편한 제이쿼리</li>").appendTo("ul");
+      $("<li>CSS 셀렉팅 메커니즘</li>").appendTo("ul");
+      $("<li>사용이 간단하고 유용한 함수 제공</li>").appendTo("ul");
+    });
+  </script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>내부삽입 메소드 .append(), appendTo()</h1>
+
+		<section>
+		
+			<h2>제이쿼리의 역할</h2>
+			<ol></ol>
+			
+			<hr />
+			
+			<h2>제이쿼리의 장점</h2>
+      <ul></ul>		
+      
+		</section>
+	</div>
+</body>
+</html>

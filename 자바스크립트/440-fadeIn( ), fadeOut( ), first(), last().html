@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>440-fadeIn( ), fadeOut( ), first(), last()</title>
+	<style>
+		*{margin:0;padding:0;}
+		#wrap{text-align:center;}
+		p{
+			width:100px;
+			height:100px;
+			margin:0 auto;
+			box-sizing:border-box;
+		}
+		.box1{border:3px solid blue;}
+		.box2{border:3px solid red;}
+	</style>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+    $(function(){
+      $("button").last().on("click", function(){
+        $(".box1").fadeOut(3000);
+        //opacity가 조절되며 서서히 사라진다.
+        //맨 마지막에 d:n 이 적용된다.
+      });
+
+      $("button").first().on("click", function(){
+        $(".box1").fadeIn(2000);
+        //opacity가 조절되며 서서히 나타난다.
+        //맨처음 d:b 이 적용된다.
+      });
+    });
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<h1>주변요소의 배치에 영향을 미칠수도 있음</h1>
+	
+	<p class="box1">박스1</p>
+	<p class="box2">박스2</p>
+	
+	<button type="button">페이드인</button>
+	<button type="button">페이드아웃</button>
+</div>	
+</body>
+</html>
+

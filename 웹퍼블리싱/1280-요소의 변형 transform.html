@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1280-요소의 변형 transform</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+
+		<style>
+
+			#wrap{
+				width: 800px;
+				margin: 0 auto;
+			}
+
+			article{
+				width: 200px;
+				height: 200px;
+				margin-left: 200px;
+				margin-bottom: 100px;
+				border: 5px solid orange;
+			}
+
+			article>p{
+				width: 200px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+				background-color: #0f2;
+				opacity: 0.5;
+			}
+
+			p.first{
+				transform:scale(1.2) rotate(0deg) skew(10deg,45deg);
+			}
+
+			p.second{
+				background-color: pink;
+				transform-origin:left bottom;
+				transform:scale(1.5) rotate(250deg);
+			}
+
+			p.third{
+				transform:translate(100px,200px);
+			}
+
+		</style>
+
+</head>
+<body>
+    <div id="wrap">
+    	<h1 class="text-center">CSS3 트랜스폼</h1>
+
+			<!--
+				transform - 과거 자바스크립트에서만 구현 가능했던 변환기능을
+												 CSS3 에서도 구현 가능
+			-->
+
+			<section>
+
+				<article>
+					<p class="first">transform-1</p>
+				</article>
+
+				<article>
+					<p class="second">transform-2</p>
+				</article>
+
+
+				<article>
+					<p class="third">transform-3</p>
+				</article>
+
+
+
+
+			</section>
+    </div>
+</body>
+</html>

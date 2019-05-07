@@ -1,0 +1,108 @@
+
+body{font-size:12px;background-color:#fdfcf0;}
+
+#wrap{
+    width:1000px;
+    margin:0 auto;
+}
+
+.header>h1{
+    padding:50px 0 20px;
+    font-size:15px;
+}
+
+.header>h1+p{
+    font-weight:600;
+    line-height:1.5;/*=150%*/
+}
+
+.section{margin:20px 0;}
+
+.section>h2{display:none;}
+
+.section>.guide{
+    padding:40px 0;
+
+    border-top:1px solid #e1ddd3;
+    border-bottom:1px solid #e1ddd3;
+
+    border:1px solid #e1ddd3;
+    border-left:none;
+    border-right:none;
+
+    border:1px solid #e1ddd3;
+    border-left-width:0;
+    border-right-width:0;
+}
+
+.section>.guide>p{
+    margin-left:30px;
+    color:#764d25;
+}
+
+/* .section>.guide>p>strong{font-weight:800;} */
+
+.section>.guide>ul{margin:20px 0 0 30px;}
+.section>.guide>ul>li{line-height:1.6;}
+
+.section>.guide>ul>li>span{
+    display:block;
+    text-indent:8px;
+}
+
+.section>.contact{margin-top:20px;}
+
+.section>.contact>h3{
+    margin-left:30px;
+    font-size:13px;
+}
+
+.section>.contact>div{
+    margin:20px 15px;
+
+    padding:20px;
+    padding-bottom:5px;
+    
+    padding:20px 20px 5px 20px;
+    
+    border:1px solid #e1ddde;
+}
+
+/* 문맥선택자는 자손을 선택하므로 중복되는 요소를 반드시 확인하며 쓰자. */
+.section>.contact li{
+    line-height:1.8;
+}
+
+.section>.contact>div>ul+p{
+    height:40px;
+    font-weight:600;
+    line-height:40px;
+}
+
+.section>.contact>div:last-child{
+    padding:20px;
+}
+
+.section>.contact>div:last-child>p{
+    line-height:20px;
+}
+
+.section>.contact>div:last-child>address{margin-top: 5px;}
+
+
+.footer>p{
+    width:160px;
+    margin:0 auto;
+    border:2px solid #727272;
+    border-radius: 5px;
+}
+
+
+.footer>p>a{
+    display:block;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+}
+
+.footer>p>a:hover{text-decoration:none;}

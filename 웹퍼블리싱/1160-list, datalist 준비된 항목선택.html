@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1160-list, datalist 준비된 항목선택</title>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div id="wrap">
+        <h1>미리 만들어 놓은 리스트 항목 노출</h1>
+
+        <form name="frmSelect" action="1080-login_ok.html" method="post">
+            <fieldset>
+                <legend>과목선택</legend>
+                <label for="subject">학습과목</label>
+                <input id="subject" type="text" list="subjectList">
+                <!-- 
+                    위 input의 속성 list값과 아래 datalist의 id값을 매칭시켜 준다.
+                 -->
+                <datalist id="subjectList">
+                    <option>HTML5</option>
+                    <option>CSS</option>
+                    <option>Javascript</option>
+                </datalist>
+            </fieldset>
+            <p>
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
