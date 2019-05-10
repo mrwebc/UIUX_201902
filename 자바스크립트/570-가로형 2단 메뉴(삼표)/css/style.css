@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+header{
+    position: relative;
+    height: 89px;/*=35+54*/
+    background-color: #b9b9b9;
+}
+
+header>h1{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 140px;
+    margin-left: -470px;
+    background-image: url(../images/logo.gif);
+    z-index: 100;
+}
+
+header>h1>a{
+    display: block;
+    height: 109px;
+    text-indent: -9999px;
+}
+
+
+header>nav{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    height: 54px;
+    background-color: #009DDF;
+}
+
+header>nav>.gnb{
+    overflow: hidden;/* .sub_container의 폭을 충분히 크게 만들다보니 넘치기 때문 */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 798px;
+    height: 99px;/*= 54+45*/
+    margin-left: -330px;
+}
+
+header>nav>.gnb>li{
+    float: left;
+    border-right: 1px solid #2FBFEF;
+    box-sizing: border-box;
+}
+
+header>nav>.gnb>li:nth-child(1){width: 160px;}
+header>nav>.gnb>li:nth-child(2){width: 148px;}
+header>nav>.gnb>li:nth-child(3){width: 180px;}
+header>nav>.gnb>li:nth-child(4){width: 151px;}
+header>nav>.gnb>li:nth-child(5){width: 159px;}
+
+header>nav>.gnb>li>a{
+    display: block;
+    position: relative;/* .bar에 대한 기준점 */
+    height: 54px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 54px;
+    text-align: center;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li:hover>a{
+    color: #222;
+    background-color: #fff;
+}
+
+header>nav>.gnb>li>a>.bar{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /*width: 100px;js에서 동적으로 할당*/
+    height: 5px;
+    /*margin-left: -50px;js에서 동적으로 할당*/
+    background-color: #009DDF;
+}
+
+/* 
+header>nav>.gnb>li:nth-child(1)>a>.bar{width:65px;margin-left:-33px;}
+header>nav>.gnb>li:nth-child(2)>a>.bar{width:65px;margin-left:-33px;}
+header>nav>.gnb>li:nth-child(3)>a>.bar{width:97px;margin-left:-48px;}
+header>nav>.gnb>li:nth-child(4)>a>.bar{width:66px;margin-left:-33px;}
+header>nav>.gnb>li:nth-child(5)>a>.bar{width:66px;margin-left:-33px;}
+ */
+
+
+
+
+header>nav>.gnb>li>.sub{
+    display: none;
+    position: absolute;/* 기준점은 .gnb */
+    left: 0;
+    top: 54px;
+    width: 1000px;
+    background-color: #fff;
+}
+
+/* .submnu_1{display: none;}
+.submnu_2{display: none;}
+.submnu_3{display: none;}
+.submnu_4{display: none;}
+.submnu_5{display: block;} */
+
+header>nav>.gnb>li>.sub>.sub_container{}
+
+header>nav>.gnb>li>.submnu_1>.sub_container{margin-left: 33px;}
+header>nav>.gnb>li>.submnu_2>.sub_container{margin-left: 60px;}
+header>nav>.gnb>li>.submnu_3>.sub_container{margin-left: 250px;}
+header>nav>.gnb>li>.submnu_4>.sub_container{margin-left: 360px;}
+header>nav>.gnb>li>.submnu_5>.sub_container{margin-left: 350px;}
+
+header>nav>.gnb>li>.sub>.sub_container>ol{}
+
+header>nav>.gnb>li>.sub>.sub_container>ol>li{
+    float: left;
+    margin: 0 12px;
+}
+
+header>nav>.gnb>li>.sub>.sub_container>ol>li>a{
+    display: block;
+    height: 45px;
+    color: #ACACAC;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+}
+
+header>nav>.gnb>li>.sub>.sub_container>ol>li>a:hover{
+    color: #000;
+    font-weight: 800;
+}
+
+
+
+
+
+section{
+    margin: 45px auto 0;
+    width: 940px;
+    height: 500px;
+    font-size: 150px;
+    line-height: 500px;
+    text-align: center;
+    background-color: #dedede;
+}
+
+/*
+    @media : 접속장치, 기기, device
+    @media screen : 화면을 가지고 있는 접속장치
+    (max-width:??) : 가로폭
+*/
+@media screen and (max-width:940px){
+    header{min-width:940px;}
+
+    header>h1{
+        left: 0;
+        margin-left: 0;
+    }
+}
+

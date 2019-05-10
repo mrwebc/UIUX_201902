@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1360-RWD 레이아웃(특정도 값에 유의)</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width: 960px;
+            margin: 30px auto;
+            font-weight: 800;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        header{
+            height: 100px;
+            line-height: 100px;
+            background-color: #ccc;
+        }
+
+        section{margin: 10px 0;}
+
+        section>.left{
+            float: left;
+            width: 200px;
+        }
+
+        section>.left>.lnb{
+            height: 250px;
+            margin-bottom: 10px;
+            line-height: 250px;
+            background-color: #00f;
+        }
+
+        section>.left>.ad{
+            height: 140px;
+            line-height: 140px;
+            background-color: #f0f;
+        }
+
+        section>.cont{
+            float: right;
+            width: 750px;
+            height: 400px;
+            line-height: 400px;
+            background-color: #ff0;
+        }
+
+        footer{
+            height: 100px;
+            line-height: 100px;
+            background-color: #0f0;
+        }
+
+        header,
+        .lnb,
+        .ad,
+        .cont,
+        footer{border-radius: 10px;}
+
+        /* 모바일에서 볼 경우 */
+        @media screen and (max-width:768px){
+
+            #wrap{
+                width: 100%;
+                margin: 0;
+            }
+
+            section>.left,
+            section>.cont{float:initial;}
+
+            section>.left{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            section>.left>.lnb,
+            section>.left>.ad{height: 50px;line-height: 50px;}
+
+            section>.cont{
+                width: 100%;
+                height: 200px;
+                line-height: 200px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>헤더</header>
+        <section class="clearfix">
+            <div class="left">
+                <div class="lnb">LNB</div>
+                <div class="ad">AD</div>
+            </div>
+            <div class="cont">컨텐츠</div>
+        </section>
+        <footer>풋터</footer>
+    </div>
+</body>
+</html>

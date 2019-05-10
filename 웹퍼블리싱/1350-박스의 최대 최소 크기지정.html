@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1350-박스의 최대 최소 크기지정</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width: 1170px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        p{
+            width: 300px;
+            height: 100%;
+            min-height: 300px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ff0;
+        }
+
+        p>strong{
+            display: block;
+            margin-top: 30px;
+            font-size: 36px;
+        }
+
+        /* width<=1200 */
+        @media screen and (max-width:1200px){
+            #wrap{
+                width:970px;
+                color:white;
+                background-color:blue;
+            }
+        }
+
+        @media screen and (max-width:992px){
+            #wrap{
+                width: 750px;
+                background-color: green;
+            }
+        }
+
+
+        @media screen and (max-width:768px){
+            #wrap{
+                width: 100%;
+                background-color: orange;
+            }
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $(".width").text($(window).innerWidth());//최초 한번만
+            $(".size").text($("p").height());//최초 한번만
+
+            //브라우저의 크기가 변경될때 마다
+            $(window).on("resize", function(){
+
+                $(".width").text(window.innerWidth);
+
+                $(".size").text($("p").height());
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            min-width,
+            min-height,
+            max-width,
+            max-height
+        </h1>
+
+        <h2 class="text-center">
+            브라우저의 width값 : 
+            <span class="width">?</span>
+        </h2>
+
+        <p>
+            박스의 최대/최소 크기를 지정할 수 있는 CSS 속성
+            <strong class="size">?</strong>
+        </p>
+    </div>
+</body>
+</html>
